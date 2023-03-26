@@ -1,3 +1,12 @@
+import {
+  faShieldHeart,
+  faUsersGear,
+  faScrewdriverWrench,
+  faStopwatch,
+  faFileShield,
+  faHeadset,
+  faGaugeHigh,
+} from "@fortawesome/free-solid-svg-icons";
 const data = [
   {
     featured: [
@@ -158,3 +167,48 @@ let anotherServiceData = [
 ];
 
 export { anotherServiceData };
+
+export const ourMarketData = [
+  {
+    icon: faScrewdriverWrench,
+    icoColor: '6560FF',
+    title: "Service Commitment",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+  },
+  {
+    icon: faUsersGear,
+    icoColor: 'C71F66',
+    title: "Super Experience",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+  },
+  {
+    icon: faShieldHeart,
+    icoColor: '378FFF',
+    title: "User Data Secure",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+  },
+  {
+    icon: faGaugeHigh,
+    icoColor: 'FF6B2C',
+    title: "Fast Service",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+  },
+  {
+    icon: faFileShield,
+    icoColor: '0FC393',
+    title: "Secure Payment",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+  },
+  {
+    icon: faHeadset,
+    icoColor: 'BE3EFF',
+    title: "Dedicated Support",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+  },
+];

@@ -27,12 +27,11 @@ function Home() {
 
         
         {anotherServiceData.map((othersevice,idx)=>{
-          return <div key={'other'+idx}>
+          return <div key={'other'+idx}>          
            
-            <Hr />
             <OtherServices servicelist={othersevice} idx={idx}/>
 
-            {idx === 1 && <> <Hr /> <WhyOurMarket /></>}
+            {idx === 0 && <WhyOurMarket />}
           </div>
         })}
     </>
