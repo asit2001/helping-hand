@@ -16,18 +16,18 @@ function NavBar() {
       <div className="nav-wrapper">
         <div className="nav-logo">Helper Hander</div>
         <div className="nav-links">
-          <form>
+          <motion.form initial={{y:-40,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1,type:'spring'}}>
             <input type={"text"} placeholder="Search for services" />
             <button>
               <FontAwesomeIcon icon={faSearch} />
             </button>
-          </form>
+          </motion.form>
 
           {NavMenu.map((menu, idx) => {
             return (
-              <div className="nav-links-menu" key={menu.title + idx}>
+              <motion.div className="nav-links-menu" key={menu.title + idx} initial={{y:-30,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:.5,type:'spring',delay:idx}}>
                 {menu.title}
-              </div>
+              </motion.div>
             );
           })}
         </div>
