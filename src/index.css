@@ -1,13 +1,415 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav{
+  position: relative;
+  top: 0;
+  background-color: transparent;
+  color: white;
+  min-height: 56px;
+  height: 56px;
+  z-index: 500;
+}
+nav .nav-logo{
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+nav .nav-wrapper{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .nav-wrapper .nav-links{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 100%;
+}
+nav .nav-wrapper .nav-links .nav-links-menu{
+  cursor: pointer;
+}
+
+nav .nav-wrapper .nav-links form{
+  position: relative;
+  /* background-color: aqua; */
+  width: 50%;
+  height: 30px;
+  
+}
+nav .nav-wrapper .nav-links form input{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-left: 1rem;
+}
+nav .nav-wrapper .nav-links form input:focus{
+  outline: none;
+}
+nav .nav-wrapper .nav-links form button{
+  position: absolute;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+  margin: auto;
+  border: none;
+  background-color: transparent;
+  border-radius: inherit;
+  cursor: pointer;
+}
+
+
+.slider{
+  height: 80vh;
+  position: relative;
+  top: -56px;
+}
+.slider-wrapper{
+  width: 100%;
+  height: 100%;
+}
+.slider-wrapper .slide1 img{
+  width: 100%;
+  height: 80vh;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide-filter{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0,.3);
+}
+.slide-text{
+  position: absolute;
+  text-transform:uppercase;
+  color: white;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  letter-spacing: .5rem;
+  line-height: 3rem;
+
+}
+.slide-text div span{
+  position: relative;
+  z-index: 1;
+}
+.slide-text div span::before{
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 100%;
+  background-color: rgba(34, 146, 216);
+  padding: 1.5rem 0;
+  border-radius: 5px;
+  transform-origin: center;
+  transform: rotate(2deg);
+  z-index: -1;
+  transition: transform .6s;
+}
+.slide-text div span:hover{
+  color: rgba(34, 146, 216);
+}
+.slide-text div span:hover::before{
+  transform: rotate(-2deg);
+  background-color: white;
+}
+
+
+.headservices{
+  position: relative;
+  background-color: white;
+  top: -80px;
+  /* min-width: 50%;
+  max-width: 50%; */
+  /* width: 50%; */
+  /* height: 100px; */
+  padding: 1rem;
+  margin: auto;
+  box-shadow: 0 10px 10px rgb(0, 0, 0,.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.headservices_service{
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.headservices_service:hover{
+  background-color: rgb(231, 231, 231);
+}
+
+.services{
+  width: 100%;
+  padding: 1rem;
+}
+.services-heading{
+  text-align: center;
+}
+.services-heading div{
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.services-heading p{
+  margin: 1rem;
+  color: rgb(126, 126, 126);
+}
+
+
+.services__list{
+  width: 100%;
+  position: relative;
+  /* background-color: aqua; */
+  height: 500px;
+}
+.services__list__arrows{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+}
+.services__list__arrows_right{
+  right: 0;
+}
+.services__list__arrows_left{
+  left: 0;
+}
+.arrow-icon{
+  background-color: rgb(195, 195, 195);
+  padding: 4rem 1rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 10;
+}
+.services__list .services__list_wrap{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 1rem;
+  gap: 20px;
+}
+.services__list .services__list_wrap .services__card{
+  width: 300px;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgb(193, 193, 193,.5);
+  flex-shrink: 0;
+}
+.services__card:hover .services__card-img-holder img{
+  transform: scale(1.2);
+}
+.services__list .services__list_wrap .services__card .services__card-img-holder{
+  overflow: hidden;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+}
+.services__list .services__list_wrap .services__card .services__card-img-holder img{
+  max-width: 100%;
+  object-fit: cover;
+  transition: transform .5s;
+}
+.services__list .services__list_wrap .services__card-body{
+  padding: 1rem;
+}
+.services__list .services__list_wrap .services__card-body div:first-child{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services__list .services__list_wrap .services__card-body :first-child :last-child{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.services__card-body_title{
+  font-size: 1.5rem;
+  padding: .5rem 0;
+  font-weight: 500;
+}
+.services__card-dec{
+  color: rgb(130, 130, 130);
+}
+.services__card-price-btn{
+  font-size: 1.3rem;
+}
+.services__card-price-btn-price{
+  justify-content: flex-start!important;
+  gap: 10px;
+  margin: .2rem 0;
+}
+.services__card-price-btn-price :first-child{
+  font-size: 1rem;
+  color: salmon;
+  font-weight: 600;
+}
+.services__card-price-btn-price span:last-child{
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.services__card-price-btn button{
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: salmon;
+  color: white;
+  padding: .8rem 0;
+  border-radius: 5px;
+}
+
+.services__card-pricebtn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.services__card-pricebtn div:first-child{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.services__card-pricebtn button{
+  border: none;
+  padding: .5rem 1rem;
+  background-color: salmon;
+  color: white;
+  border-radius: 5px;
+}
+
+.servicesAds{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(236, 236, 236);
+  flex-shrink: 0;
+  padding: 4rem 1rem;
+  margin: 5rem 0;
+  gap: 20px;
+}
+.servicesAds_img_holder{
+  width: 25%;
+  overflow: hidden;
+  transition: transform .5s;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.servicesAds_img_holder:hover{
+  transform: scale(1.05);
+}
+.servicesAds_img_holder img{
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.otherServies{
+  width: 100%;
+  height: fit-content;
+  margin: 5rem 0;
+
+}
+.otherServies-wrap{
+  overflow: hidden;
+}
+
+.otherServies-wrap_head{
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 1rem 0;
+
+}
+.otherServies-wrap_Serviceslist_wrap{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 1rem;
+  gap: 10px;
+ 
+}
+.otherServies-wrap_Serviceslist_wrap_card{
+  width: 266px;
+  height: 250px;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-shrink: 0; */
+  cursor: pointer;
+}
+
+
+.otherServies-wrap_Serviceslist_wrap_card_imgHolder{
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+.otherServies-wrap_Serviceslist_wrap_card_imgHolder img{
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.ourMarketplace{
+  width: 100%;
+  background-color: rgb(236, 236, 236,.4);
+  min-height: 200px;
+}
+.ourMarketplace_wrap{
+  padding: 1rem;
+}
+.ourMarketplace_wrap_head{
+  text-align: center;
+}
+.ourMarketplace_wrap_head_title{
+  font-size: 2rem;
+  font-weight: 600;
 }
