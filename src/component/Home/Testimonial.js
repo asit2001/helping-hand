@@ -1,5 +1,8 @@
-import React, { useState } from "react";
-import quotesimg from '../../images/right-quote-sign.png'
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState, useRef } from "react";
+import quotesimg from "../../images/right-quote-sign.png";
+import Testup from "../svg/Testup";
 
 const TestimonialCards = [
   {
@@ -25,33 +28,16 @@ const TestimonialCards = [
 ];
 
 function Testimonial() {
-    const [cuno,setnocurr] = useState([0,1,2,3])
-    function handleprev(){
-        let newdata = cuno.map((item,idx)=>{
-            if(item === 0){
-                return TestimonialCards.length-1;
-            }
-            else{
-                return item-1
-            }
-           })
-           setnocurr([
-            ...newdata
-           ])
-    }
-    function handlenext(){
-       let newdata = cuno.map((item,idx)=>{
-        if(item === TestimonialCards.length-1){
-            return 0;
-        }
-        else{
-            return item+1
-        }
-       })
-       setnocurr([
-        ...newdata
-       ])
-    }
+  const ref = useRef();
+  function handleprev() {
+    let clientwidth = ref.current.clientWidth;
+    ref.current.scrollLeft = ref.current.scrollLeft - clientwidth;
+    // console.log(ref.current.scrollWidth)
+  }
+  function handlenext() {
+    let clientwidth = ref.current.clientWidth;
+    ref.current.scrollLeft = ref.current.scrollLeft + clientwidth;
+  }
   return (
     <div className="testimonial_container">
       <div className="testimonial_container_wrap">
@@ -62,20 +48,47 @@ function Testimonial() {
           </div>
         </div>
         <div className="testimonial_container_wrap_card_holder">
-            <button onClick={handleprev}>prev</button>
-            <button onClick={handlenext}>next</button>
-          <div className="testimonial_container_wrap_card_holder_wrap">
-            {TestimonialCards.map((card,idx)=>{
-                return <div key={card.name+idx} className={`testimonial_container_wrap_card`} id={'card-'+idx} style={{zIndex:cuno[idx]}}>
-                    <div className="testimonial_container_wrap_card_img-holder">
-                        <img src={card.img} alt=""/>
+          <div
+            onClick={handleprev}
+            className="testimonial_card_arrow testimonial_card_arrow_left"
+          >
+            <FontAwesomeIcon
+              className="testimonial_card_arrow_left_ico"
+              icon={faAngleLeft}
+            />
+          </div>
+          <div
+            onClick={handlenext}
+            
+            className="testimonial_card_arrow testimonial_card_arrow_right"
+          >
+            <FontAwesomeIcon className="testimonial_card_arrow_right_ico" icon={faAngleRight}/>
+          </div>
+          <div
+            ref={ref}
+            className="testimonial_container_wrap_card_holder_wrap"
+          >
+            {TestimonialCards.map((card, idx) => {
+              return (
+                <div
+                  key={card.name + idx}
+                  className={`testimonial_container_wrap_card`}
+                  id={"card-" + idx}
+                >
+                  <div className="testimonial_container_wrap_card_img-holder">
+                    <img src={card.img} alt="" />
+                  </div>
+                  <div className="testimonial_container_wrap_card_details">
+                    <img className="quotes" src={quotesimg} alt="" />
+                    <div className="testimonial_container_wrap_card_details_title">
+                      {card.name}
                     </div>
-                    <div className="testimonial_container_wrap_card_details">
-                        <img className="quotes" src={quotesimg} alt="" />
-                        <div className="testimonial_container_wrap_card_details_title">{card.name}</div>
-                        <div className="testimonial_container_wrap_card_details_dec">{card.des}</div>
+                    <div className="testimonial_container_wrap_card_details_dec">
+                      {card.des}
                     </div>
+                  </div>
                 </div>
+              );
             })}
           </div>
         </div>

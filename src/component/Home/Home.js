@@ -37,7 +37,7 @@ function Home() {
         })}
 
 
-        {/* <Testimonial /> */}
+        <Testimonial />
     </>
   )
 }
