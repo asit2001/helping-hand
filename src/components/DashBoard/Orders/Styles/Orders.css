@@ -10,6 +10,10 @@
     padding: 5px;
     text-transform: capitalize;
 }
+.order__details:hover{
+    background-color: var(--color-order-hover);
+    border-radius: 20px;
+}
 .order__details__item.btn{
     border: none;
     outline: none;
@@ -17,6 +21,7 @@
     cursor: pointer;
     font-weight: 500;
     color: var(--color-red);
+    background-color: transparent;
 }
 .order__details__item.pending{
     color: var(--color-primary);

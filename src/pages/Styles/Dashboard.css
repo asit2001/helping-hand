@@ -15,6 +15,6 @@
 }
 .dashboard__container__right{
     flex: 0.8;
-    padding-left: 50px;
+    padding: 0 50px;
     position: relative;
 }
