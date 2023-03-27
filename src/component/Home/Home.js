@@ -10,6 +10,7 @@ import { anotherServiceData } from '../../ServicesData/data'
 import OtherServices from './services/OtherServices'
 import WhyOurMarket from './services/WhyOurMarket'
 import HowItWorks from './services/HowItWorks'
+import Testimonial from './Testimonial'
 
 function Home() {
   return (
@@ -34,6 +35,9 @@ function Home() {
             {idx === 1 && <HowItWorks />}
           </div>
         })}
+
+
+        {/* <Testimonial /> */}
     </>
   )
 }

@@ -10,13 +10,14 @@ import { motion } from "framer-motion";
 function Services({ heading, servicelist, idx }) {
   function handleleftmove(e) {
     let div = document.querySelector(`#${heading}${idx}`);
-    let clienwidth = div.clientWidth;
-    div.scrollLeft = div.scrollLeft - clienwidth;
+    // let clienwidth = div.clientWidth;
+    // console.log(clienwidth)
+    div.scrollLeft = div.scrollLeft - 320;
   }
   function handlerightmove(e) {
     let div = document.querySelector(`#${heading}${idx}`);
-    let clienwidth = div.clientWidth;
-    div.scrollLeft = div.scrollLeft + clienwidth;
+    // let clienwidth = div.clientWidth;
+    div.scrollLeft = div.scrollLeft + 320;
   }
   return (
     <div className="services">
@@ -51,9 +52,10 @@ function Services({ heading, servicelist, idx }) {
                     whileInView={{ y: 0 ,opacity: 1}}
                     transition={{ type: "spring", duration: 2 }}
                     initial={{ y: heading[0] === 'popular'? 100 : 100 ,opacity:0}}
-                    viewport={{ once: true}}
+                    viewport={{ once: true,amount: 0.5}}
                     className="services__card"
                     style={{
+                     
                       height: heading[0] === "popular" && "fit-content",
                     }}
                   >
@@ -103,9 +105,10 @@ function Services({ heading, servicelist, idx }) {
                     whileInView={{opacity : 1, scale:1 }}
                     transition={{ type: "spring", duration: 2 }}
                     initial={{ opacity : 0, scale: heading[0] === 'popular'? .5 : .5 }}       
-                    viewport={{ once: true}}             
+                    viewport={{ once: true ,amount: 0.5}}             
                     className="services__card"
                     style={{
+                      
                       height: heading[0] === "popular" && "fit-content",
                     }}
                   >

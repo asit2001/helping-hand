@@ -18,32 +18,19 @@ function HeadServices() {
   return (
     <div className="headservices">
       {ServiceCard.map((card, idx) => {
-        return (
-          <div key={card.title + idx}>
-            {idx % 2 === 0 ? (
+        return (                   
               <motion.div
+                key={card.title + idx}
                 animate={{ y: 0,opacity:1 }}
-                initial={{ y: -100 ,opacity:0}}
+                initial={{ y: idx % 2 === 0? -100 : 100 ,opacity:0}}
                 transition={{ type: "spring", duration: 1.5, bounce: 0.5,delay: 0.5}}
                 
                 className="headservices_service"
               >
                 <img src={card.icon} alt="" width={"50px"} />
                 <div className="">{card.title}</div>
-              </motion.div>
-            ) : (
-              <motion.div
-                animate={{ y: 0 }}
-                initial={{ y: 100 }}
-                transition={{ type: "spring", duration: 1.5, bounce: 0.5 }}
-                
-                className="headservices_service"
-              >
-                <img src={card.icon} alt="" width={"50px"} />
-                <div className="">{card.title}</div>
-              </motion.div>
-            )}
-          </div>
+              </motion.div> 
+          
         );
       })}
     </div>

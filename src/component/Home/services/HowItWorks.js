@@ -1,7 +1,7 @@
 import React from "react";
-import texture from '../../../images/texture/4907157.jpg'
+import texture from "../../../images/texture/4907157.jpg";
 import Tex from "../../svg/Tex";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 
 let Steps = [
   {
@@ -32,39 +32,52 @@ function HowItWorks() {
             3 step to take our services
           </div>
           <div className="howitwork_container_wrap_head_cards_holder">
-            {Steps.map((step,idx)=>{
-                return <motion.div 
-                whileInView={{x:0,opacity:1}}
-                initial={{x:-200,opacity:0}}
-                transition={{duration:1.5,type:'spring',delay:idx}}
-                viewport={{once:true,amount:0.5}}
-                key={step.title+idx} className="howitwork_container_wrap_head_card">
-                    <div className="howitwork_container_wrap_head_card_icon-holder">
-                        {step.icon}
+            {Steps.map((step, idx) => {
+              return (
+                <motion.div
+                  whileInView={{x:0,opacity:1}}
+                  initial={{ x: -200, opacity: 0 }}
+                  transition={{
+                    duration: 1.5,
+                    type: "spring",
+                    stiffness: 50,
+                    delay: idx,
+                  }}
+                  viewport={{ once: true }}
+                  key={step.title + idx}
+                  className="howitwork_container_wrap_head_card"
+                >
+                  <div className="howitwork_container_wrap_head_card_icon-holder">
+                    {step.icon}
+                  </div>
+                  <div className="">
+                    <div className="howitwork_container_wrap_head_card_title">
+                      {step.title}
                     </div>
-                    <div className="">
-                        <div className="howitwork_container_wrap_head_card_title">{step.title}</div>
-                        <div className="howitwork_container_wrap_head_card_dec">{step.dec}</div>
+                    <div className="howitwork_container_wrap_head_card_dec">
+                      {step.dec}
                     </div>
+                  </div>
                 </motion.div>
+              );
             })}
           </div>
         </div>
         <div className="howitwork_container_wrap_img_holder">
           <motion.img
-            whileInView={{scale:1,opacity:1}}
-            initial={{scale:.5,opacity:0}}
-            transition={{duration:2}}
-            viewport={{once:true,amount: .5}}
+            whileInView={{ scale: 1, opacity: 1 }}
+            initial={{ scale: 0.5, opacity: 0 }}
+            transition={{ duration: 2 }}
+            viewport={{ once: true, amount: 0.5 }}
             src="https://serve-nextjs.vercel.app/assets/images/home3/work.png"
             alt=""
           />
         </div>
       </div>
       <div className="textureimg">
-        <img src={texture} alt=""/>
+        <img src={texture} alt="" />
       </div>
-        <Tex />
+      <Tex />
     </div>
   );
 }
