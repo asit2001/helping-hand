@@ -2,7 +2,6 @@ import {
   faShieldHeart,
   faUsersGear,
   faScrewdriverWrench,
-  faStopwatch,
   faFileShield,
   faHeadset,
   faGaugeHigh,

@@ -50,8 +50,8 @@ function Services({ heading, servicelist, idx }) {
                   <motion.div
                     whileInView={{ y: 0 ,opacity: 1}}
                     transition={{ type: "spring", duration: 2 }}
-                    initial={{ y: heading[0] === 'popular'? 400 : 450 ,opacity:0}}
-                    
+                    initial={{ y: heading[0] === 'popular'? 100 : 100 ,opacity:0}}
+                    viewport={{ once: true}}
                     className="services__card"
                     style={{
                       height: heading[0] === "popular" && "fit-content",
@@ -102,7 +102,8 @@ function Services({ heading, servicelist, idx }) {
                   <motion.div
                     whileInView={{opacity : 1, scale:1 }}
                     transition={{ type: "spring", duration: 2 }}
-                    initial={{ opacity : 0, scale: heading[0] === 'popular'? .5 : .5 }}                    
+                    initial={{ opacity : 0, scale: heading[0] === 'popular'? .5 : .5 }}       
+                    viewport={{ once: true}}             
                     className="services__card"
                     style={{
                       height: heading[0] === "popular" && "fit-content",

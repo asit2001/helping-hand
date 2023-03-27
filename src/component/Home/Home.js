@@ -9,7 +9,7 @@ import ServicesAds from './services/ServicesAds'
 import { anotherServiceData } from '../../ServicesData/data'
 import OtherServices from './services/OtherServices'
 import WhyOurMarket from './services/WhyOurMarket'
-import Hr from '../Hr'
+import HowItWorks from './services/HowItWorks'
 
 function Home() {
   return (
@@ -30,8 +30,8 @@ function Home() {
           return <div key={'other'+idx}>          
            
             <OtherServices servicelist={othersevice} idx={idx}/>
-
             {idx === 0 && <WhyOurMarket />}
+            {idx === 1 && <HowItWorks />}
           </div>
         })}
     </>
