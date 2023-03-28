@@ -2,7 +2,8 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useRef } from "react";
 import quotesimg from "../../images/right-quote-sign.png";
-import Testup from "../svg/Testup";
+import whiteteture from '../../images/white-paper-texture.jpg'
+
 
 const TestimonialCards = [
   {
@@ -40,6 +41,7 @@ function Testimonial() {
   }
   return (
     <div className="testimonial_container">
+   
       <div className="testimonial_container_wrap">
         <div className="testimonial_container_wrap_head">
           <div className="testimonial_container_wrap_title">Testimonial</div>
@@ -79,6 +81,7 @@ function Testimonial() {
                     <img src={card.img} alt="" />
                   </div>
                   <div className="testimonial_container_wrap_card_details">
+                  <img className='testmonialsvg' src={whiteteture} alt=''/>
                     <img className="quotes" src={quotesimg} alt="" />
                     <div className="testimonial_container_wrap_card_details_title">
                       {card.name}

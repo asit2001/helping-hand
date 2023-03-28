@@ -26,7 +26,7 @@ const Tex = (props) => {
       <defs>
         <linearGradient id="SvgjsLinearGradient1041">
           <stop offset="0" stopColor="#f7f7f7" />
-          <stop offset="1" stopColor="#83c3ff" />
+          <stop offset="1" stopColor="#9a54a2" />
         </linearGradient>
       </defs>
     </motion.svg>

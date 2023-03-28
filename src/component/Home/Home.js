@@ -11,6 +11,7 @@ import OtherServices from './services/OtherServices'
 import WhyOurMarket from './services/WhyOurMarket'
 import HowItWorks from './services/HowItWorks'
 import Testimonial from './Testimonial'
+import Footer from '../Footer/Footer'
 
 function Home() {
   return (
@@ -38,6 +39,8 @@ function Home() {
 
 
         <Testimonial />
+
+        <Footer />
     </>
   )
 }

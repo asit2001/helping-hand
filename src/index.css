@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
+:root{
+  --color-white:#faf9fa;
+  --color-dark-purple :#200525;
+  --color-bg-dashboard : #611f69;
+  --color-bglight-dashboard : #8c4c93;
+  --color-primary : #4ba4ff;
+  --color-yellow: #FFB72B;
+  --color-gray-gray: #645a65;
+  --color-light-pink: #dfd2e1;
+  --color-text:#645a65;
+  --color-success :#52ccb4;
+  --color-red:#f54456;
+}
 
 *{
   margin: 0;
@@ -176,7 +188,7 @@ nav .nav-wrapper .nav-links form button{
   top: -4px;
   left: -4px;
   width: 100%;
-  background-color: rgba(34, 146, 216);
+  background-color: var(--color-bglight-dashboard);
   padding: 1.5rem 0;
   border-radius: 5px;
   transform-origin: center;
@@ -185,7 +197,7 @@ nav .nav-wrapper .nav-links form button{
   transition: transform .6s;
 }
 .slide-text div span:hover{
-  color: rgba(34, 146, 216);
+  color: var(--color-bglight-dashboard);
 }
 .slide-text div span:hover::before{
   transform: rotate(-2deg);
@@ -343,7 +355,7 @@ nav .nav-wrapper .nav-links form button{
 }
 .services__card-price-btn-price :first-child{
   font-size: 1rem;
-  color: salmon;
+  color: var(--color-bglight-dashboard);
   font-weight: 600;
 }
 .services__card-price-btn-price span:last-child{
@@ -354,7 +366,7 @@ nav .nav-wrapper .nav-links form button{
   width: 100%;
   cursor: pointer;
   border: none;
-  background-color: salmon;
+  background-color: var(--color-bglight-dashboard);
   color: white;
   padding: .8rem 0;
   border-radius: 5px;
@@ -373,9 +385,10 @@ nav .nav-wrapper .nav-links form button{
 .services__card-pricebtn button{
   border: none;
   padding: .5rem 1rem;
-  background-color: salmon;
+  background-color: var(--color-bglight-dashboard);
   color: white;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .servicesAds{
@@ -676,7 +689,7 @@ nav .nav-wrapper .nav-links form button{
   transform: rotate(360deg) scale(1.5);
 }
 .howitwork_container_wrap_head_card_icon-holder{
-  background-color: slateblue;
+  background-color: var(--color-bglight-dashboard);
   color: white;
   display: inline-block;
   padding: 1rem;
@@ -702,6 +715,7 @@ nav .nav-wrapper .nav-links form button{
   z-index: -1;
   max-width: 100%;
   object-fit: cover;
+
 }
 
 
@@ -710,6 +724,7 @@ nav .nav-wrapper .nav-links form button{
   width: 100%;
   min-height: 500px;
   margin-bottom: 3rem;
+  position: relative;
 }
 
 .testimonial_container_wrap{
@@ -724,7 +739,7 @@ nav .nav-wrapper .nav-links form button{
   /* width: fit-content; */
   text-align: center;
   position: relative;
-  color: slateblue;
+  color: var(--color-bglight-dashboard);
   line-height: 2rem;
 }
 .testimonial_container_wrap_title::before{
@@ -732,7 +747,7 @@ nav .nav-wrapper .nav-links form button{
   position: absolute;
   width: 0;
   height: 3px;
-  background-color: black;
+  background-color: var(--color-bglight-dashboard);
   left: 0;
   right: 0;
   bottom: 0;
@@ -824,8 +839,10 @@ nav .nav-wrapper .nav-links form button{
 }
 
 .testimonial_container_wrap_card_details{
+  width: 100%;
   height: 200px;
-  background-color: turquoise;
+  background-color: var(--color-bglight-dashboard);
+  color: white;
   padding: 1rem;
   border-radius: 10px;
   position: relative;
@@ -847,9 +864,139 @@ nav .nav-wrapper .nav-links form button{
 }
 
 
+.footer{
+  background-color: var(--color-bglight-dashboard);
+  width: 100%;
+  min-height: 200px;
+  /* height: 200px; */
+  margin-top: 100px;
+  padding: 100px 0;
+  box-shadow: 0 -5px 10px rgb(0, 0, 0,.2);
+  color: #ffffff;
+  position: relative;
+}
+.testmonialsvg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  opacity: .5;
+}
+.footerwhitedottexture{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  opacity: .25;
+}
+.footer1svg{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  mix-blend-mode: color;
+  opacity: .6;
+}
+.footer_wrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  z-index: 2;
+}
+.col-1, .col-2, .col-3, .col-4{
+  padding: 2rem;
+  width: 280px;
+}
+.footer_head{
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+  text-transform: capitalize;
+  margin: 1rem 0;
+}
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.col-1 .col-1_logo{
+  flex-shrink: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col-1_subtitle{
+  text-align: justify;
+}
+.logofooter{
+  width: 60%;
+}
+.col-2 ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  list-style-type: none;
+}
 
+.col-4 form{
+  position: relative;
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+.col-4 form input{
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  border-color: rgb(0, 0, 0,.2);
+  padding-left: .5rem;
+}
+.col-4 form button{
+  position: absolute;
+  right: 2px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: none;
+  border-radius: inherit;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
 
-
+.subfooter{
+  border-top: 1px solid rgb(0, 0, 0,.2);
+  border-bottom: 1px solid rgb(0, 0, 0,.2);
+  background-color: #98639d;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 60px;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+  color: white;
+}
 
 @media only screen and (max-width: 1370px){
     .howitwork_container_wrap{
@@ -858,7 +1005,6 @@ nav .nav-wrapper .nav-links form button{
     .howitwork_container_wrap_head{
       width: 80%;
       margin: auto;
-      /* padding: 0 2rem; */
     }
     .howitwork_container_wrap_img_holder{
       width: 80%;
