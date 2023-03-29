@@ -14,7 +14,7 @@ function DashBoardHeader() {
         </div>
         <div className="header__filter">
             <AdjustIcon className="header__icon"/>
-            Advanced search
+            <p className="header__filter__text">Advanced search</p>
         </div>
         <div className="header__profile">
             <CiBellOn className="header__icon"/>

@@ -4,12 +4,13 @@ import {
     MdPendingActions,
   } from "react-icons/md";
 import { RiSettings3Line, RiShoppingCart2Fill } from "react-icons/ri";
+import Logo from "../Logo";
 import "./Styles/SideBar.css";
 function SideBar() {
   return (
-    <div className="dashboard__container__left">
+      <div className="dashboard__container__left">
           <div className="container__left__logo">
-            <h1>Helping</h1>
+            <Logo className="logo__image"/>
           </div>
           <ul className="container__left__list">
             <li className="container__left__list__item">

@@ -46,3 +46,32 @@
     border-radius: 50%;
     cursor: pointer;
 }
+@media screen and (max-width:1250px) {
+    .header__filter__text{
+        display: none;
+    }
+    .header__searchBox{
+        flex: 0.6;
+    }
+    .header__filter{
+        flex: none;
+        margin-left: 15px;
+    }
+    .header__profile{
+        flex: 0.4;
+    }
+}
+@media screen and (max-width:875px) {
+    .container__right__header{
+        border-bottom: 1px solid #d6d6d6be;
+        position: sticky;
+        top: 0;
+        background-color: var(--color-white);
+        z-index: 1;
+    }
+}
+@media screen and (max-width:580px) {
+    .header__profile__name{
+        display: none;
+    }
+}

@@ -1,6 +1,8 @@
 import OrderCard from '../../Cards/OrderCard/OrderCard';
 import './Styles/Orders.css';
 function Orders() {
+  console.log(process.env.REACT_APP_FIREBASE_API_KEY);
+  
   return (
     <>
         <h2 className="dashboard__container__right__tabTitle">Order</h2>
@@ -11,9 +13,16 @@ function Orders() {
                 <p className="order__title__item">Name</p>
                 <p className="order__title__item">Address</p>
                 <p className="order__title__item">Date</p>
-                <p className="order__title__item">Status</p>
+                <p className="order__title__item">Earning</p>
                 <p className="order__title__item">Reject</p>
             </div>
+            <OrderCard/>
+            <OrderCard/>
+            <OrderCard/>
+            <OrderCard/>
+            <OrderCard/>
+            <OrderCard/>
+            <OrderCard/>
             <OrderCard/>
         </div>
         <div className="pagination">
