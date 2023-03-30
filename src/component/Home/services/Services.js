@@ -1,11 +1,7 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faStar,
-  faArrowLeft,
-  faArrowRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { FaStar,FaArrowLeft,FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import noimage from '../../../images/source-404.jpg'
 
 function Services({ heading, servicelist, idx }) {
   function handleleftmove(e) {
@@ -21,6 +17,7 @@ function Services({ heading, servicelist, idx }) {
   }
   return (
     <div className="services">
+    {console.log(servicelist)}
       <div className="services-heading">
         <div>{heading} Services</div>
         <p>
@@ -30,23 +27,24 @@ function Services({ heading, servicelist, idx }) {
       </div>
       <div className="services__list">
         <div className="services__list__arrows services__list__arrows_left">
-          <FontAwesomeIcon
-            onClick={handleleftmove}
+
+          <FaArrowLeft  onClick={handleleftmove}
             className="arrow-icon"
-            icon={faArrowLeft}
-          />
+           />
         </div>
         <div className="services__list__arrows services__list__arrows_right">
-          <FontAwesomeIcon
+          <FaArrowRight
             onClick={handlerightmove}
             className="arrow-icon"
-            icon={faArrowRight}
+           
           />
         </div>
         <div className="services__list_wrap" id={`${heading}${idx}`}>
-          {servicelist.map((card, idx) => {
-            return (
-              <div key={"card" + idx}>
+          
+          {servicelist.map((cat,idx)=>{
+            return cat.data.map((card,idx)=>{
+              return (
+                <div key={"card" + idx}>
                 {idx % 2 === 0 ?
                   <motion.div
                     whileInView={{ y: 0 ,opacity: 1}}
@@ -54,38 +52,35 @@ function Services({ heading, servicelist, idx }) {
                     initial={{ y: heading[0] === 'popular'? 100 : 100 ,opacity:0}}
                     viewport={{ once: true,amount: 0.5}}
                     className="services__card"
-                    style={{
-                     
-                      height: heading[0] === "popular" && "fit-content",
+                    style={{                     
+                      height: heading[0] === "popular" && "350px",
                     }}
                   >
                     <div className="services__card-img-holder">
-                      <img src={card.img} alt="" />
+                      <img src={card.imgUrl?card.imgUrl: noimage} alt="" />
                     </div>
                     <div className="services__card-body">
                       <div>
-                        <div>{card.name}</div>
+                        <div style={{textTransform:'uppercase'}}>{cat.category}</div>
                         <div>
-                          <FontAwesomeIcon
-                            size="xs"
-                            color="orange"
-                            icon={faStar}
+                          <FaStar                           
+                            color="orange"                           
                           />
-                          <span>{card.rating}</span>
+                          <span>{card.ratting?card.ratting:card.rating}</span>
                         </div>
                       </div>
-                      <div className="services__card-body_title">
-                        {card.title}
+                      <div className="services__card-body_title" style={{textTransform:'capitalize'}}>
+                        {card.serviceName}
                       </div>
                       {heading[0] !== "popular" && (
-                        <div className="services__card-dec">{card.dec}</div>
+                        <div className="services__card-dec">{card.services[0].details}</div>
                       )}
 
                       {heading[0] === "popular" ? (
                         <div className="services__card-pricebtn">
                           <div>
-                            <span>Starting at:</span>
-                            <span>&#8377;{card.price}</span>
+                            <span style={{fontSize:'1rem'}}>Starting at:</span>                           
+                            <span>&#8377;{card.services[0].price}</span>
                           </div>
                           <button>Book Now</button>
                         </div>
@@ -93,7 +88,7 @@ function Services({ heading, servicelist, idx }) {
                         <div className="services__card-price-btn">
                           <div className="services__card-price-btn-price">
                             <span>Starting at</span>
-                            <span>&#8377;{card.price}</span>
+                            <span>&#8377;{card.services[0].price}</span>
                           </div>
                           <button>Book Now</button>
                         </div>
@@ -109,36 +104,34 @@ function Services({ heading, servicelist, idx }) {
                     className="services__card"
                     style={{
                       
-                      height: heading[0] === "popular" && "fit-content",
+                      height: heading[0] === "popular" && "350px",
                     }}
                   >
                     <div className="services__card-img-holder">
-                      <img src={card.img} alt="" />
+                      <img src={card.imgUrl?card.imgUrl: noimage} alt="" />
                     </div>
                     <div className="services__card-body">
                       <div>
-                        <div>{card.name}</div>
+                        <div style={{textTransform:'uppercase'}}>{cat.category}</div>
                         <div>
-                          <FontAwesomeIcon
-                            size="xs"
-                            color="orange"
-                            icon={faStar}
+                          <FaStar                           
+                            color="orange"                           
                           />
-                          <span>{card.rating}</span>
+                          <span>{card.ratting?card.ratting:card.rating}</span>
                         </div>
                       </div>
-                      <div className="services__card-body_title">
-                        {card.title}
+                      <div className="services__card-body_title" style={{textTransform:'capitalize'}}> 
+                        {card.serviceName}
                       </div>
                       {heading[0] !== "popular" && (
-                        <div className="services__card-dec">{card.dec}</div>
+                        <div className="services__card-dec">{card.services[0].details}</div>
                       )}
 
                       {heading[0] === "popular" ? (
                         <div className="services__card-pricebtn">
                           <div>
-                            <span>Starting at:</span>
-                            <span>&#8377;{card.price}</span>
+                            <span style={{fontSize:'1rem'}}>Starting at:</span>
+                            <span>&#8377;{card.services[0].price}</span>
                           </div>
                           <button>Book Now</button>
                         </div>
@@ -146,7 +139,7 @@ function Services({ heading, servicelist, idx }) {
                         <div className="services__card-price-btn">
                           <div className="services__card-price-btn-price">
                             <span>Starting at</span>
-                            <span>&#8377;{card.price}</span>
+                            <span>&#8377;{card.services[0].price}</span>
                           </div>
                           <button>Book Now</button>
                         </div>
@@ -155,7 +148,8 @@ function Services({ heading, servicelist, idx }) {
                   </motion.div>                 
                 }
               </div>
-            );
+              )
+            })
           })}
         </div>
       </div>
