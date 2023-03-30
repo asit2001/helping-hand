@@ -1,5 +1,4 @@
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {BiPaperPlane} from 'react-icons/bi'
 import React from 'react'
 // import Footer1 from '../svg/footer/Footer1'
 import SubFooter from './SubFooter'
@@ -34,7 +33,7 @@ function Footer() {
                 <div>Get the latest creative news from Qixer template</div>
                 <form>
                     <input placeholder='Enter Email Address'/>
-                    <button><FontAwesomeIcon icon={faPaperPlane}/> </button>
+                    <button><BiPaperPlane /> </button>
                 </form>
             </div>
         </div>

@@ -1,5 +1,4 @@
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {FaAngleRight,FaAngleLeft} from 'react-icons/fa'
 import React, { useState, useRef } from "react";
 import quotesimg from "../../images/right-quote-sign.png";
 import whiteteture from '../../images/white-paper-texture.jpg'
@@ -54,9 +53,9 @@ function Testimonial() {
             onClick={handleprev}
             className="testimonial_card_arrow testimonial_card_arrow_left"
           >
-            <FontAwesomeIcon
+            <FaAngleLeft
               className="testimonial_card_arrow_left_ico"
-              icon={faAngleLeft}
+              
             />
           </div>
           <div
@@ -64,7 +63,7 @@ function Testimonial() {
             
             className="testimonial_card_arrow testimonial_card_arrow_right"
           >
-            <FontAwesomeIcon className="testimonial_card_arrow_right_ico" icon={faAngleRight}/>
+            <FaAngleRight className="testimonial_card_arrow_right_ico"/>
           </div>
           <div
             ref={ref}

@@ -163,6 +163,7 @@
     right: 0;
     border-radius: inherit;
     box-shadow: 0 5px 5px rgba(32, 32, 32, 0.2);
+   
 }
 .payemntOption>div{
     padding: .5rem;    
@@ -318,10 +319,105 @@
     border-radius: 10px;
 }
 
+.otherpayment{
+    /* background-color: #52ccb4; */
+    width: 100%;
+    height: 100%;
+}
+.otherpayment_option{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .5rem;
+    padding-right: 1.5rem;
+}
+.otherpayment_option_upi , .otherpayment_option_cash{
+    width: 100%;
+    position: relative;
 
-
-
-
+    margin: 1rem 0;
+    /* min-height: 40px; */
+    /* background-color: #4ba4ff; */
+}
+.otherpayment_option_upi div:first-child ,
+.otherpayment_option_cash div:first-child
+{
+    width: 100%;
+    min-height: 40px;
+    background-color: var(--color-bg-dashboard);
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.otherpayment_option_upi div:first-child:hover,
+.otherpayment_option_cash div:first-child:hover
+{
+    background-color: var(--color-bglight-dashboard);
+}
+.otherpayment_option_upi form:last-child,
+.otherpayment_option_cash form:last-child
+{
+    width: 100%;
+    min-height: 200px;
+    background-color: rgb(255, 255, 255);
+    margin-top: .3rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 3px 5px rgb(0, 0, 0,.2);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.otherpayment_option_upi form input ,
+.otherpayment_option_cash form input
+{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    padding-left: 1rem;
+}
+.otherpayment_option_upi form input:focus,
+.otherpayment_option_cash form input:focus
+{
+    outline: 1px solid var(--color-bglight-dashboard);
+}
+.otherpayment_option_upi form button,
+.otherpayment_option_cash form button
+{
+    border: none;
+    background-color: var(--color-bglight-dashboard);
+    color: white;
+    width: 140px;
+    height: 45px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    align-self: flex-end;
+}
+.otherpayment_option_upi form button:hover,
+.otherpayment_option_cash form button:hover
+{
+    background-color: var(--color-bg-dashboard);
+}
+.slideicon{
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
 /* @media only screen and (max-width: 1130px){
     .card_container{
         flex-direction: column-reverse!important;

@@ -2,6 +2,7 @@ import React from "react";
 import { FaStar,FaArrowLeft,FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import noimage from '../../../images/source-404.jpg'
+import { useNavigate } from "react-router";
 
 function Services({ heading, servicelist, idx }) {
   function handleleftmove(e) {
@@ -15,9 +16,17 @@ function Services({ heading, servicelist, idx }) {
     // let clienwidth = div.clientWidth;
     div.scrollLeft = div.scrollLeft + 320;
   }
+  const navigate = useNavigate();
+
+  function sendData(obj,name){
+    let newName = name.toLowerCase().replaceAll(' ','-')
+    navigate(`/services/${newName}`, {state:obj})
+  }
+
+
+
   return (
     <div className="services">
-    {console.log(servicelist)}
       <div className="services-heading">
         <div>{heading} Services</div>
         <p>
@@ -82,7 +91,7 @@ function Services({ heading, servicelist, idx }) {
                             <span style={{fontSize:'1rem'}}>Starting at:</span>                           
                             <span>&#8377;{card.services[0].price}</span>
                           </div>
-                          <button>Book Now</button>
+                          <button onClick={(e)=>{sendData(card,card.serviceName)}}>Book Now</button>
                         </div>
                       ) : (
                         <div className="services__card-price-btn">
@@ -90,7 +99,7 @@ function Services({ heading, servicelist, idx }) {
                             <span>Starting at</span>
                             <span>&#8377;{card.services[0].price}</span>
                           </div>
-                          <button>Book Now</button>
+                          <button onClick={(e)=>{sendData(card,card.serviceName)}}>Book Now</button>
                         </div>
                       )}
                     </div>
@@ -133,7 +142,7 @@ function Services({ heading, servicelist, idx }) {
                             <span style={{fontSize:'1rem'}}>Starting at:</span>
                             <span>&#8377;{card.services[0].price}</span>
                           </div>
-                          <button>Book Now</button>
+                          <button onClick={(e)=>{sendData(card,card.serviceName)}}>Book Now</button>
                         </div>
                       ) : (
                         <div className="services__card-price-btn">
@@ -141,7 +150,7 @@ function Services({ heading, servicelist, idx }) {
                             <span>Starting at</span>
                             <span>&#8377;{card.services[0].price}</span>
                           </div>
-                          <button>Book Now</button>
+                          <button onClick={(e)=>{sendData(card,card.serviceName)}}>Book Now</button>
                         </div>
                       )}
                     </div>

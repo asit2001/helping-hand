@@ -4,6 +4,7 @@ import { faSearch,faBars } from "@fortawesome/free-solid-svg-icons";
 import {motion} from 'framer-motion';
 
 
+
 const NavMenu = [
   { icon: "", title: "Blog", link: "" },
   { icon: "", title: "Home", link: "" },
@@ -32,7 +33,7 @@ function NavBar() {
       transition={{duration:2,delay:1.5,type:'spring',bounce:.5}}
       className="nav-wrapper">
         <div className="nav-logo">
-           Helping Hand    
+           Helping Hand
         </div>
         <div className="nav-links">
           <form>
