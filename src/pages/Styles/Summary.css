@@ -1,0 +1,150 @@
+#bodm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.summary {
+    /* border-bottom: 2px solid black; */
+    width: 80%;
+}
+
+#summary-flex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* height: 100%; */
+    /* border: 1px solid black; */
+}
+
+#summary-flex>div {
+    width: 50%;
+    height: auto;
+    /* background-color: blueviolet; */
+}
+
+#summary-flex>div:nth-child(2) {
+    width: 40%;
+
+    justify-content: center;
+    /* background-color: aquamarine; */
+    /* margin-left: 10%; */
+}
+
+#summary-flex>div:nth-child(2) {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    #summary-flex {
+        flex-direction: column;
+    }
+
+    #sum2 {
+        margin-top: 100px;
+    }
+
+    #summary-flex>div {
+        width: 100%;
+    }
+
+    #summary-flex>div:nth-child(2) {
+        margin-left: 0;
+    }
+}
+
+.Row {
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+}
+
+.Row>#row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.Row>div:nth-child(4) {
+    border-bottom: 2px dotted grey;
+}
+
+#sum-btn {
+    background-color:rgb(8, 255, 131);
+    border: none;
+    padding: 10px;
+    font-size: 17px;
+    width: 60%;
+    /* color: white; */
+    border-radius: 15px;
+    margin-bottom: 10px;
+    /* margin-top: 10px; */
+}
+
+#stn1 {
+    padding: 10px;
+    border-top: 4px solid rgb(225, 225, 225);
+    border-bottom: 4px solid rgb(225, 225, 225);
+}
+
+#stn2 {
+    padding: 10px;
+    border-bottom: 4px solid rgb(225, 225, 225);
+}
+
+#sub-btn {
+    width: 100%;
+    margin-top: 30px;
+    background-color:rgb(195, 44, 195);
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+#cntr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.cnt-btn {
+    cursor: pointer;
+}
+
+#cntr {
+    display: flex;
+    align-items: center;
+}
+
+#cntr-part {
+    /* background-color: rgb(238, 248, 255); */
+    display: flex;
+    flex-direction: row;
+    border: 2px dashed rgb(176, 12, 176);
+    border-radius: 10px;
+}
+
+#cntr-part > p {
+    color: rgb(195, 44, 195);
+    padding: 10px 20px 10px 20px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 524px) {
+    #cntr-part {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    #sum-btn {
+        width: 95%;
+    }
+}
