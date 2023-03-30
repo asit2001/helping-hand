@@ -1,18 +1,21 @@
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaCaretDown } from "react-icons/fa";
 import React, { useState } from "react";
 import "../../payment.css";
 import DebitCard from "./DebitCard";
-import cardImg from '../../images/cardimg.png'
-import upiimg from '../../images/QR Code-amico.png'
+import cardImg from "../../images/cardimg.png";
+import upiimg from "../../images/QR Code-amico.png";
+import circle2 from '../../images/circle2.png'
+import circle1 from '../../images/circle1.png'
+
 import Upi from "./Upi";
 import Cash from "./Cash";
+import { motion } from "framer-motion";
 
-const paymentoption = ['Debit Card','UPI','Cash']
+const paymentoption = ["Debit Card", "UPI", "Cash"];
 
 function PaymentPage() {
-    const [selectPayament,setSelectPayment] = useState('Debit Card')
-    const [selectOption, setSelectOption] = useState(false)
+  const [selectPayament, setSelectPayment] = useState("Debit Card");
+  const [selectOption, setSelectOption] = useState(false);
   return (
     <div className="paymentPage">
       <div className="payment-holder">
@@ -22,32 +25,86 @@ function PaymentPage() {
           <div>&#8377;450</div>
         </div>
         <div className="playmentCard">
+          <img className="playmentCard_backgound_circile2" src={circle2} alt='' />
+          <img className="playmentCard_backgound_circile1" src={circle1} alt='' />
           <div className="playmentCard-holder">
-            {selectPayament === 'Debit Card' && <img className="cardimg" src={cardImg} alt=''/>}
-            {selectPayament === 'UPI' && <img className="cardimg" src={upiimg} alt=''/>}
-            <div className="playmentCard-left">
-            </div>
+            {selectPayament === "Debit Card" && (
+              <motion.img
+                animate={{ opacity: 1, x: 0 }}
+                initial={{ x: -200, opacity: 0 }}
+                transition={{
+                  duration: 2,
+                  delay: 1.5,
+                  type: "spring",
+                  bounce: 0.5,
+                }}
+                className="cardimg"
+                src={cardImg}
+                alt=""
+              />
+            )}
+            {selectPayament === "UPI" && (
+              <motion.img
+                animate={{ scale: 1, opacity: 1 }}
+                initial={{ scale: 0, opacity: 0 }}
+                transition={{ duration: 1.5, type: "spring" }}
+                className="cardimg"
+                src={upiimg}
+                alt=""
+              />
+            )}
+            <motion.div
+              animate={{ height: "100%" }}
+              initial={{ height: 0 }}
+              transition={{ duration: 1.5 }}
+              className="playmentCard-left"
+            ></motion.div>
             <div className="playmentCard-right">
-                <div className="Select_Payment_Option">
-                    Select Payment Option
-                    <div className="payemntSelect_holder" onMouseEnter={()=>{
-                        setSelectOption(!selectOption)
-                    }} onMouseLeave={()=>{setSelectOption(!selectOption)}}>
-                        <div className="payemntSelect">{selectPayament}  <FontAwesomeIcon style={{transform:selectOption?'rotate(180deg)':'rotate(0)'}} icon={faCaretDown} /> </div>
-                        {selectOption && <div className="payemntOption">
-                            {paymentoption.map((option,idx)=>{
-                                return <div key={option+idx} onClick={(e)=>{
-                                    setSelectPayment(option)
-                                    setSelectOption(false)            
-                                }} className="option">{option}</div>
-                            })}
-                        </div>}
+              <div className="Select_Payment_Option">
+                Select Payment Option
+                <div
+                  className="payemntSelect_holder"
+                  onClick={() => setSelectOption(!selectOption)}
+                  onMouseEnter={() => {
+                    setSelectOption(!selectOption);
+                  }}
+                  onMouseLeave={() => {
+                    setSelectOption(!selectOption);
+                  }}
+                >
+                  <div className="payemntSelect">
+                    {selectPayament}{" "}
+                    <FaCaretDown
+                      style={{
+                        transform: selectOption
+                          ? "rotate(180deg)"
+                          : "rotate(0)",
+                      }}
+                    />
+                  </div>
+                  {selectOption && (
+                    <div className="payemntOption">
+                      {paymentoption.map((option, idx) => {
+                        return (
+                          <div
+                            key={option + idx}
+                            onClick={(e) => {
+                              setSelectPayment(option);
+                              setSelectOption(false);
+                            }}
+                            className="option"
+                          >
+                            {option}
+                          </div>
+                        );
+                      })}
                     </div>
+                  )}
                 </div>
-                {selectPayament === 'Debit Card' && <DebitCard />}
-                {selectPayament === 'UPI' && <Upi />}
-                {selectPayament === 'Cash' && <Cash />}
-               
+              </div>
+              {selectPayament === "Debit Card" && <DebitCard />}
+              {selectPayament === "UPI" && <Upi />}
+              {selectPayament === "Cash" && <Cash />}
             </div>
           </div>
         </div>
