@@ -1,103 +1,11 @@
-import {
-  faShieldHeart,
-  faUsersGear,
-  faScrewdriverWrench,
-  faFileShield,
-  faHeadset,
-  faGaugeHigh,
-} from "@fortawesome/free-solid-svg-icons";
-const data = [
-  {
-    featured: [
-      {
-        img: "https://bytesed.com/tf/qixer/qixer_html/assets/img/service/fs1.jpg",
-        name: "Riyand Hossain",
-        title: "All Painting & Renovation Service",
-        dec: " It is a long established fact that a reader will be distracted by the readable",
-        price: 80,
-        rating: "4.9(231)",
-      },
-      {
-        img: "https://bytesed.com/tf/qixer/qixer_html/assets/img/service/fs2.jpg",
-        name: "Arafat Hossain",
-        title: "All Emergency Electrical Supports",
-        dec: " It is a long established fact that a reader will be distracted by the readable",
-        price: 60,
-        rating: "4.9(351)",
-      },
-      {
-        img: "https://bytesed.com/tf/qixer/qixer_html/assets/img/service/fs3.jpg",
-        name: "Shafiq Islam",
-        title: "All Hair Cut & Hair Color Service",
-        dec: " It is a long established fact that a reader will be distracted by the readable",
-        price: 70,
-        rating: "4.8(271)",
-      },
-      {
-        img: "https://bytesed.com/tf/qixer/qixer_html/assets/img/service/fs1.jpg",
-        name: "Shafiq Ahmed",
-        title: " All Emergency Electrical Services",
-        dec: " It is a long established fact that a reader will be distracted by the readable",
-        price: 90,
-        rating: "4.7(331)",
-      },
-    ],
-  },
-  {
-    popular: [
-      {
-        img: "https://bytesed.com/tf/qixer/qixer_html/assets/img/service/s1.jpg",
-        name: "Riyand Hossain",
-        title: "All Painting & Renovation Service",
-        dec: " It is a long established fact that a reader will be distracted by the readable",
-        price: 80,
-        rating: "4.9(231)",
-      },
-      {
-        img: "https://bytesed.com/tf/qixer/qixer_html/assets/img/service/s2.jpg",
-        name: "Riyand Hossain",
-        title: "All Painting & Renovation Service",
-        dec: " It is a long established fact that a reader will be distracted by the readable",
-        price: 80,
-        rating: "4.9(231)",
-      },
-      {
-        img: "https://bytesed.com/tf/qixer/qixer_html/assets/img/service/s3.jpg",
-        name: "Riyand Hossain",
-        title: "All Painting & Renovation Service",
-        dec: " It is a long established fact that a reader will be distracted by the readable",
-        price: 80,
-        rating: "4.9(231)",
-      },
-      {
-        img: "https://bytesed.com/tf/qixer/qixer_html/assets/img/service/s4.jpg",
-        name: "Riyand Hossain",
-        title: "All Painting & Renovation Service",
-        dec: " It is a long established fact that a reader will be distracted by the readable",
-        price: 80,
-        rating: "4.9(231)",
-      },
-      {
-        img: "https://bytesed.com/tf/qixer/qixer_html/assets/img/service/s5.jpg",
-        name: "Riyand Hossain",
-        title: "All Painting & Renovation Service",
-        dec: " It is a long established fact that a reader will be distracted by the readable",
-        price: 80,
-        rating: "4.9(231)",
-      },
-      {
-        img: "https://bytesed.com/tf/qixer/qixer_html/assets/img/service/s6.jpg",
-        name: "Riyand Hossain",
-        title: "All Painting & Renovation Service",
-        dec: " It is a long established fact that a reader will be distracted by the readable",
-        price: 80,
-        rating: "4.9(231)",
-      },
-    ],
-  },
-];
+import {FaUserShield,FaWhmcs,FaHeadset} from 'react-icons/fa'
+import {AiFillSetting} from 'react-icons/ai'
+import {BsSpeedometer} from 'react-icons/bs'
+import {SiFsecure} from 'react-icons/si'
 
-export default data;
+
+
+
 
 let anotherServiceData = [
   {
@@ -169,43 +77,43 @@ export { anotherServiceData };
 
 export const ourMarketData = [
   {
-    icon: faScrewdriverWrench,
-    icoColor: '6560FF',
+    icon: FaWhmcs,
+    icoColor: "6560FF",
     title: "Service Commitment",
     description:
       "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
   },
   {
-    icon: faUsersGear,
-    icoColor: 'C71F66',
+    icon: AiFillSetting,
+    icoColor: "C71F66",
     title: "Super Experience",
     description:
       "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
   },
   {
-    icon: faShieldHeart,
-    icoColor: '378FFF',
+    icon: FaUserShield,
+    icoColor: "378FFF",
     title: "User Data Secure",
     description:
       "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
   },
   {
-    icon: faGaugeHigh,
-    icoColor: 'FF6B2C',
+    icon: BsSpeedometer,
+    icoColor: "FF6B2C",
     title: "Fast Service",
     description:
       "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
   },
   {
-    icon: faFileShield,
-    icoColor: '0FC393',
+    icon: SiFsecure,
+    icoColor: "0FC393",
     title: "Secure Payment",
     description:
       "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
   },
   {
-    icon: faHeadset,
-    icoColor: 'BE3EFF',
+    icon: FaHeadset,
+    icoColor: "BE3EFF",
     title: "Dedicated Support",
     description:
       "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",

@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { ourMarketData } from "../../../ServicesData/data";
 import circle1 from "../../../images/circle1.png";
@@ -67,9 +66,9 @@ function WhyOurMarket() {
                   className="ourMarketplace_wrap_body_card_icon"
                   style={{ backgroundColor: `#${data.icoColor}` }}
                 >
-                  <FontAwesomeIcon
+                  <data.icon
                     className="ourMarketplace_ico"
-                    icon={data.icon}
+                    // icon={data.icon}
                   />
                 </div>
                 <div className="ourMarketplace_wrap_body_card_title">
