@@ -1,0 +1,104 @@
+@media only screen and (max-width: 1370px){
+    .howitwork_container_wrap{
+      flex-direction: column;
+    }
+    .howitwork_container_wrap_head{
+      width: 80%;
+      margin: auto;
+    }
+    .howitwork_container_wrap_img_holder{
+      width: 80%;
+      margin: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 1187px){
+  .com_nav .nav-wrapper{
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .com_nav .nav-wrapper .nav-links{
+    width: 80%;
+    gap: 30px;
+  }
+  }
+  @media only screen and (max-width: 860px){
+  .com_nav .nav-wrapper .nav-links{
+    display: none;
+  }
+  .mobile-nav{
+    display: flex;
+  }
+  .com_nav .nav-wrapper{
+    padding: 0 3rem;
+  }
+  .nav-mob-bar{
+    display: unset;
+  }
+  }
+  @media only screen and (max-width: 769px){
+  .howsworkbacktexture{
+    width: 200px;
+    height: 150px;
+    top: 60px;
+  }
+  }
+  @media only screen and (max-width: 662px){
+  .slide-text{
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .slide-text div span::before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  }
+  @media only screen and (max-width: 477px){
+  .slide-text{
+    font-size: 1.1rem;
+    font-weight: 700;
+  
+    letter-spacing: .4rem;
+  }
+  .testimonial_container_wrap_card{
+    width: 300px;
+  }
+  }
+  @media only screen and (max-width: 426px){
+  .howitwork_container_wrap_head{
+    width: 100%;
+  }
+  .howitwork_container_wrap_head_card{
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  }
+  
+  
+  @media only screen and (max-width: 370px){
+  .ourMarketplace_wrap_body_card{
+    width: 300px;
+  }
+  .slide-text{
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .4rem;
+  }
+  .testimonial_container_wrap_card{
+    width: 250px;
+  }
+  .testimonial_container_wrap_card_img-holder{
+    width: 150px;
+    height: 150px;
+  }
+  .testimonial_container_wrap_card_details{
+    height: fit-content;
+  }
+  .testimonial_container_wrap_card_details .quotes{
+    top: 35px;
+  }
+  }

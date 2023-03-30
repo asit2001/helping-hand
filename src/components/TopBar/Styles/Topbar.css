@@ -1,14 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .bar2 {
     position: fixed;
     top: 0;
     transition-duration: 1s;
     z-index: 100;
-    /* margin-left: 10%; */
     width: 100%;
     background-color: rgba(255, 255, 255, 0.950);
     border-bottom: 1px solid rgb(221, 221, 221);

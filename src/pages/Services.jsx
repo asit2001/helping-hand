@@ -1,28 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
+import {useLocation} from 'react-router-dom'
 import './Styles/Services.css';
-import Topbar from './Topbar';
+import Topbar from '../components/TopBar/Topbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import getAllData from './firebase';
-import { Providercards } from './Providercards';
+import { Providercards } from '../components/Cards/ProductCard/Providercards';
 import { BsBookmarkCheckFill, BsFillBookmarkPlusFill } from "react-icons/bs";
 
 export default function Services() {
     const [nav, setnav] = useState(false);
-
     // change part
-    const [Arr, setlist] = useState([]);
-    const [data, setdata] = useState({});
-
-    useEffect(() => {
-        if (Arr.length > 0) {
-            setdata({ ...Arr[1].data[0] })
-        }
-    }, [Arr])
-
-
-    useEffect(() => {
-        getAllData(setlist)
-    }, []);
+    const {state:data} = useLocation();
 
     window.onscroll = () => {
         if (document.documentElement.scrollTop > 500 || document.body.scrollTop > 500) {

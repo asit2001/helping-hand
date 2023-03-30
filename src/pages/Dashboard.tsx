@@ -3,6 +3,7 @@ import "./Styles/Dashboard.css";
 import SideBar from "../components/SideBar/SideBar";
 import Orders from "../components/DashBoard/Orders/Orders";
 import DashBoardHeader from "../components/Header/DashBoardHeader";
+import UserDetails from "../components/DashBoard/UserDetails/UserDetails";
 function Dashboard() {
   return (
     <div className="dashboard">
@@ -10,7 +11,7 @@ function Dashboard() {
         <SideBar/>
         <div className="dashboard__container__right">
            <DashBoardHeader/>   
-        <Orders/>
+        <UserDetails/>
         </div>
       </div>
     </div>
