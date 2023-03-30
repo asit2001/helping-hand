@@ -1,8 +1,6 @@
 import OrderCard from '../../Cards/OrderCard/OrderCard';
 import './Styles/Orders.css';
 function Orders() {
-  console.log(process.env.REACT_APP_FIREBASE_API_KEY);
-  
   return (
     <>
         <h2 className="dashboard__container__right__tabTitle">Order</h2>
