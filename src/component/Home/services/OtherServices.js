@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import noimage from '../../../images/source-404.jpg'
 import { useNavigate } from "react-router";
+import '../../../style/otherservices.css'
 
 function OtherServices({ servicelist, heading ,idx }) {
   const navigate = useNavigate();

@@ -1,0 +1,28 @@
+.servicesAds{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    padding: 4rem 1rem;
+    margin: 5rem 0;
+    gap: 20px;
+  }
+  .servicesAds_img_holder{
+    width: 320px;
+    overflow: hidden;
+    transition: transform .5s;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  .servicesAds_img_holder:hover{
+    transform: scale(1.05);
+  }
+  .servicesAds_img_holder img{
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+ 

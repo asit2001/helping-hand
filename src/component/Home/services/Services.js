@@ -3,6 +3,7 @@ import { FaStar,FaArrowLeft,FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import noimage from '../../../images/source-404.jpg'
 import { useNavigate } from "react-router";
+import '../../../style/services.css'
 
 function Services({ heading, servicelist, idx }) {
   function handleleftmove(e) {

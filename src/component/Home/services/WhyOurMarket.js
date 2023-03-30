@@ -5,6 +5,7 @@ import circle2 from "../../../images/circle2.png";
 import squaredot from "../../../images/dot-square.png";
 import linecross from "../../../images/line-cross.png";
 import { motion } from "framer-motion";
+import '../../../style/ourmarket.css'
 
 function WhyOurMarket() {
   return (

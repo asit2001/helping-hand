@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch,faBars } from "@fortawesome/free-solid-svg-icons";
 import {motion} from 'framer-motion';
-
+import '../../style/navbar.css'
 
 
 const NavMenu = [
@@ -26,7 +26,7 @@ function NavBar() {
     }
   }
   return (
-    <nav>
+    <nav className="com_nav">
       <motion.div 
       animate={{y:0,opacity:1}}
       initial={{y:-30,opacity:0}}
