@@ -6,42 +6,43 @@ import {
 import { RiSettings3Line, RiShoppingCart2Fill } from "react-icons/ri";
 import Logo from "../Logo";
 import "./Styles/SideBar.css";
-function SideBar() {
+import { Link } from "react-router-dom";
+function SideBar({state,setState}:{state:string,setState:Function}) {
   return (
       <div className="dashboard__container__left">
           <div className="container__left__logo">
             <Logo className="logo__image"/>
           </div>
           <ul className="container__left__list">
-            <li className="container__left__list__item">
-                <a  className="list__item__link">
+            <li className={`container__left__list__item ${state==="dashboard" && "active"}`} onClick={()=>{setState("dashboard")}}>
+                <Link to={""}  className="list__item__link">
                     <MdDashboard className="list__item__icon" />
                     <span className="list__item__name">Dashboard</span>
-                </a>
+                </Link>
             </li>
-            <li className="container__left__list__item active">
-                <a  className="list__item__link">
+            <li className={`container__left__list__item ${state==="order" && "active"}`} onClick={()=>{setState("order")}}>
+                <Link to={""}  className="list__item__link">
                     <RiShoppingCart2Fill className="list__item__icon" />
                     <span className="list__item__name">Orders</span>
-                </a>
+                </Link>
             </li>
-            <li className="container__left__list__item">
-                <a  className="list__item__link">
+            <li className={`container__left__list__item ${state==="history" && "active"}`} onClick={()=>{setState("history")}}>
+                <Link to={""}  className="list__item__link">
                     <MdOutlineHistory className="list__item__icon" />
                     <span className="list__item__name">History</span>
-                </a>
+                </Link>
             </li>
-            <li className="container__left__list__item">
-                <a  className="list__item__link">
+            <li className={`container__left__list__item ${state==="pending" && "active"}`} onClick={()=>{setState("pending")}}>
+                <Link to={""}  className="list__item__link">
                     <MdPendingActions className="list__item__icon" />
                     <span className="list__item__name">Pending</span>
-                </a>
+                </Link>
             </li>
-            <li className="container__left__list__item">
-                <a  className="list__item__link">
+            <li className={`container__left__list__item ${state==="setting" && "active"}`} onClick={()=>{setState("setting")}}>
+                <Link to={""}  className="list__item__link">
                     <RiSettings3Line className="list__item__icon" />
                     <span className="list__item__name">Setting</span>
-                </a>
+                </Link>
             </li>
           </ul>
         </div>
