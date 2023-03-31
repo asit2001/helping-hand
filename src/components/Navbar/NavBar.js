@@ -10,7 +10,7 @@ const NavMenu = [
   { icon: "", title: "Blog", link: "" },
   { icon: "", title: "Home", link: "" },
   { icon: "", title: "Help", link: "" },
-  { icon: "", title: "Login/Sign Up", link: "" },
+  { icon: "", title: "Login/Sign Up", link: "/signup" },
 ];
 
 function NavBar() {
@@ -46,9 +46,9 @@ function NavBar() {
 
           {NavMenu.map((menu, idx) => {
             return (
-              <div className="nav-links-menu" key={menu.title + idx}>
+              <NavLink to={menu.link} className="nav-links-menu" key={menu.title + idx}>
                 {menu.title}
-              </div>
+              </NavLink>
             );
           })}
         </div>
@@ -72,9 +72,9 @@ function NavBar() {
 
           {NavMenu.map((menu, idx) => {
             return (
-              <div className="nav-links-menu" key={menu.title + idx}>
+              <NavLink to={menu.link} className="nav-links-menu mob_menu" key={menu.title + idx}>
                 {menu.title}
-              </div>
+              </NavLink>
             );
           })}
       </motion.div>
