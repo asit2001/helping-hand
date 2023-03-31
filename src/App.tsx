@@ -20,7 +20,11 @@ const router = createBrowserRouter([{
 {
   path:"/services/payment",
   element:<PaymentPage />
-}
+},
+{
+  path:"*",
+  element:''
+},
 ])
 function App() {
   return (

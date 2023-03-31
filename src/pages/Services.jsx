@@ -2,7 +2,6 @@ import { useState } from 'react';
 import {useLocation} from 'react-router-dom'
 import './Styles/Services.css';
 import Topbar from '../components/TopBar/Topbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Providercards } from '../components/Cards/ProductCard/Providercards';
 import { BsBookmarkCheckFill, BsFillBookmarkPlusFill } from "react-icons/bs";
 

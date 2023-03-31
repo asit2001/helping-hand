@@ -1,5 +1,3 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { FcMoneyTransfer, FcRating } from "react-icons/fc";
 import AccordionOwn from '../Accordion/AcoordionOwn';
 
@@ -8,7 +6,7 @@ export function Providercards(props) {
     return (<>
         <div id='cards'>
             <div id="part1">
-                <img id="profile" src="https://img.freepik.com/free-psd/3d-illustration-person_23-2149436192.jpg?w=2000" />
+                <img id="profile" src="https://img.freepik.com/free-psd/3d-illustration-person_23-2149436192.jpg?w=2000" alt=''/>
                 <div id="name">
                     <h5 style={{ fontSize: "22px" }}>{name}</h5>
                     <p>Service Provider</p>
