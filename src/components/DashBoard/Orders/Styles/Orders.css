@@ -1,0 +1,110 @@
+.dashboard__container__right__tabTitle{
+    padding: 5px 10px;
+}
+.dashboard__container__right__subtitle{
+    padding: 5px 10px;
+}
+.orders{
+    margin-top: 50px;
+}
+.order__title,.order__details{
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 2fr 1fr 1fr 1fr;
+    margin: 5px 0;
+}
+.order__title__item,.order__details__item{
+    margin: 5px;
+    padding: 5px;
+    text-transform: capitalize;
+}
+.order__details:hover{
+    background-color: var(--color-order-hover);
+    border-radius: 20px;
+}
+.order__details__item.btn{
+    display: flex;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--color-red);
+    background-color: transparent;
+}
+.pagination{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 100px);
+    gap: 15px;
+}
+.pagination__box{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 40px;
+    color: var(--color-white);
+    background-color: var(--color-bg-dashboard);
+    cursor: pointer;
+    border-radius: 8px;
+}
+.order__details__sm{
+    display: none;
+}
+@media screen and (max-width:1250px) {
+    .order__title,.order__details{
+        grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr 1fr;
+        padding: 5px 0;
+    }
+}
+@media screen and (max-width:875px) {
+    .pagination{
+        display: none;
+    }
+    .order__title{
+        display: none;
+    }
+    .order__details,.order__details:hover{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 20px;
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+        border-radius: 5px;
+        /* background-image: url(https://img.freepik.com/free-vector/minimalist-white-background-with-neumorphic-circle_1017-39167.jpg),linear-gradient(var(--color-bg-dashboard),var(--color-dark-purple)); */
+        /* background-blend-mode: overlay; */
+    }
+    .order__details__sm{
+        display: inline;
+        font-weight: 500;
+        color: var(--color-dark-purple);
+        margin-right: 10px;
+    }
+    .order__details__item{
+        color: #585757;
+    }
+    .order__details__item:nth-child(2){
+        order: 2;
+    }
+    .order__details__item:nth-child(3){
+        order: 5;
+        max-width: calc(100% - 80px);
+    }
+    .order__details__item.btn{
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+
+    }
+    .earning{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    
+}

@@ -1,0 +1,107 @@
+.howitwork_container{
+  
+    position: relative;
+  }
+  .textureimg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .textureimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: opacity(.4);
+  
+  }
+  .howitwork_container_wrap{
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .howitwork_container_wrap_head{
+    width: 50%;
+    flex-shrink: 0;
+  }
+  
+  .howitwork_container_wrap_head_title{
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .howitwork_container_wrap_head_des{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .howitwork_container_wrap_img_holder{
+    width: 40%;
+    flex-shrink: 0;
+  }
+  .howitwork_container_wrap_img_holder img{
+    max-width: 100%;
+    object-fit: cover;
+  }
+  .howitwork_container_wrap_head_card{
+    /* border: 1px solid rgb(188, 188, 188); */
+    margin: 1rem 0;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    cursor: default;
+    transition: box-shadow .5s;
+    box-shadow: 0 2px 4px rgb(179, 179, 179,.4);
+  }
+  
+  .howitwork_container_wrap_head_card:hover{
+    box-shadow: 0 5px 10px rgb(179, 179, 179,.4);
+  }
+  .howitwork_container_wrap_head_card:hover .howitwork_container_wrap_head_card_icon-holder{
+    transform: rotate(360deg) scale(1.5);
+  }
+  .howitwork_container_wrap_head_card_icon-holder{
+    background-color: var(--color-bglight-dashboard);
+    color: white;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-style: italic;
+    transition: transform .5s;
+  }
+  .howitwork_container_wrap_head_card_title{
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .howsworkbacktexture{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0.5;
+    transform: rotate(50deg);
+    z-index: -1;
+    max-width: 100%;
+    object-fit: cover;
+  
+  }
+
+
+ 
