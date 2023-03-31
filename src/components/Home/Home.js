@@ -4,8 +4,6 @@ import Slider from "./Slider/Slider";
 import HeadServices from "./Slider/HeadServices";
 import Services from "./services/Services";
 import ServicesAds from "./services/ServicesAds";
-
-import { anotherServiceData } from "../../ServicesData/data";
 import OtherServices from "./services/OtherServices";
 import WhyOurMarket from "./services/WhyOurMarket";
 import HowItWorks from "./services/HowItWorks";

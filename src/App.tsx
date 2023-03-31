@@ -1,9 +1,10 @@
-import Home from './component/Home/Home';
+import Home from './components/Home/Home';
 import Dashboard from "./pages/Dashboard";
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 
 import './App.css'
 import Services from './pages/Services';
+import PaymentPage from './components/Payment/PaymentPage';
 
 const router = createBrowserRouter([{
   path:"/",
@@ -11,9 +12,14 @@ const router = createBrowserRouter([{
 },{
   path:"/dashboard",
   element:<Dashboard/>
-},{
+},
+{
   path:"/services/:id",
   element:<Services/>
+},
+{
+  path:"/services/payment",
+  element:<PaymentPage />
 }
 ])
 function App() {

@@ -7,6 +7,7 @@ function Other() {
     upi: true,
     cash: false,
   });
+  const [isChecked,setIsChecked] = useState(false) 
   const borderStyle = {
     borderTopLeftRadius: "10px",
     borderTopRightRadius: "10px",
@@ -31,6 +32,9 @@ function Other() {
         })
     }
   }
+  function handlecheckCashoption(e){
+    setIsChecked(e.target.checked)
+  }
   return (
     <div className="otherpayment">
       <div className="otherpayment_option">
@@ -52,6 +56,7 @@ function Other() {
         </div>
         <div className="otherpayment_option_cash">
           <div
+            className="otherpayment_option_cash_name"
             style={
               otherPaymentOption.cash
                 ? { ...borderStyle }
@@ -67,8 +72,11 @@ function Other() {
           </div>
           {!otherPaymentOption.upi && (
             <form>
-              <input />
-              <button>pay</button>
+              <div>
+                <label>Cash Payment</label>
+                <input type="checkbox" onChange={handlecheckCashoption}/>
+              </div>
+              <button type="button" disabled={isChecked?false:true}>Proceed</button>
             </form>
           )}
         </div>

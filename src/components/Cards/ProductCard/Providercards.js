@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Accordion from 'react-bootstrap/Accordion';
 import { FcMoneyTransfer, FcRating } from "react-icons/fc";
+import AccordionOwn from '../Accordion/AcoordionOwn';
 
 export function Providercards(props) {
     const { details, discountedPrice, name, price } = props.obt;
@@ -15,17 +15,13 @@ export function Providercards(props) {
                 </div>
             </div>
 
-            <Accordion style={{ margin: "20px" }}>
-                <Accordion.Item eventKey="0">
-                    <Accordion.Header>View Details</Accordion.Header>
-                    <Accordion.Body style={{ textAlign: "left" }}>
-                        <h5>Specification :</h5>
-                        <ul style={{ listStyleType: "square", color: "darkviolet" }}>
-                            {details.map((e, idx) => <li key={idx}>{e}</li>)}
-                        </ul>
-                    </Accordion.Body>
-                </Accordion.Item>
-            </Accordion>
+            <AccordionOwn title={"View Details"} style={{ margin: "20px" }}>
+                <div> <h5>Specification :</h5>
+                    <ul style={{ listStyleType: "square", color: "darkviolet" }}>
+                        {details.map((e, idx) => <li key={idx}>{e}</li>)}
+                    </ul>
+                </div>
+            </AccordionOwn>
 
             <div id="part2">
                 <h1 style={{ fontSize: "1.6rem" }}>Customer rating</h1>

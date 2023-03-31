@@ -343,7 +343,7 @@
     /* background-color: #4ba4ff; */
 }
 .otherpayment_option_upi div:first-child ,
-.otherpayment_option_cash div:first-child
+.otherpayment_option_cash .otherpayment_option_cash_name
 {
     width: 100%;
     min-height: 40px;
@@ -359,7 +359,7 @@
     padding: 0 1rem;
 }
 .otherpayment_option_upi div:first-child:hover,
-.otherpayment_option_cash div:first-child:hover
+.otherpayment_option_cash .otherpayment_option_cash_name:hover
 {
     background-color: var(--color-bglight-dashboard);
 }
@@ -378,8 +378,7 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
-.otherpayment_option_upi form input ,
-.otherpayment_option_cash form input
+.otherpayment_option_upi form input
 {
     width: 100%;
     height: 40px;
@@ -387,8 +386,13 @@
     border-radius: 5px;
     padding-left: 1rem;
 }
-.otherpayment_option_upi form input:focus,
-.otherpayment_option_cash form input:focus
+.otherpayment_option_cash form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.otherpayment_option_upi form input:focus
 {
     outline: 1px solid var(--color-bglight-dashboard);
 }
@@ -457,5 +461,8 @@
         right: 0;
         margin: 0 auto;
         width: 200px;
+    }
+    .playmentCard-holder .cardimg2{
+        top: 0
     }
 }

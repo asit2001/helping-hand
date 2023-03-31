@@ -1,11 +1,12 @@
 import { FaCaretDown } from "react-icons/fa";
 import React, { useState } from "react";
-import "../../payment.css";
+import "../../style/payment.css";
 import DebitCard from "./DebitCard";
 import cardImg from "../../images/cardimg.png";
 import upiimg from "../../images/QR Code-amico.png";
 import circle2 from "../../images/circle2.png";
 import circle1 from "../../images/circle1.png";
+import {FaAngleLeft} from 'react-icons/fa'
 
 import { motion } from "framer-motion";
 import Other from "./Other";
@@ -18,7 +19,7 @@ function PaymentPage() {
   return (
     <div className="paymentPage">
       <div className="payment-holder">
-        <div className="paymentPage_head"> {"<---"} Payment Method</div>
+        <div className="paymentPage_head"> <FaAngleLeft /> Payment Method</div>
         <div className="order">
           <div>Services Name</div>
           <div>&#8377;450</div>
@@ -55,7 +56,7 @@ function PaymentPage() {
                 animate={{ scale: 1, opacity: 1 }}
                 initial={{ scale: 0, opacity: 0 }}
                 transition={{ duration: 1.5, type: "spring" }}
-                className="cardimg"
+                className="cardimg cardimg2"
                 src={upiimg}
                 alt=""
               />
