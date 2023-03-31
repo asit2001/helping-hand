@@ -1,9 +1,11 @@
 .accordion-container {
     border: 1px solid var(--color-bglight-dashboard);
-    border-radius: 4px;
+    border-radius: 5px;
+    margin-top: 50px;
   }
   
   .accordion-title {
+    margin-top: 10px;
     padding: 10px;
     background-color: var(--color-bglight-dashboard);
     font-weight: bold;
@@ -26,7 +28,7 @@
   
   .accordion-content.open {
     opacity: 1;
-    padding: 20px;
+    padding: 40px;
     max-height: 300px;
   }
   

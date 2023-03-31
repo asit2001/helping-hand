@@ -14,13 +14,11 @@ export function Providercards(props) {
                 </div>
             </div>
 
-            <AccordionOwn title={"View Details"} style={{ margin: "20px" }}>
-                <div>
-                    <h3 style={{marginBottom: "10px"}}>Specification :</h3>
-                    <ul style={{ color: "darkviolet", marginLeft: "15px" }}>
-                        {details.map((e, idx) => <li key={idx}>{e}</li>)}
-                    </ul>
-                </div>
+            <AccordionOwn title={"View Details"}>
+                <h3 style={{marginLeft: "25px", padding: "5px"}}>Specification :</h3>
+                <ul style={{ color: "darkviolet", marginLeft: "40px", marginBottom: "10px" }}>
+                    {details.map((e, idx) => <li style={{padding: "5px"}} key={idx}>{e}</li>)}
+                </ul>
             </AccordionOwn>
 
             <div id="part2">

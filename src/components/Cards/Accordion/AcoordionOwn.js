@@ -9,9 +9,9 @@ const AccordionOwn = ({ title, style ,children }) => {
   };
 
   return (
-    <div className="accordion-container" style={{...style}}>
-      <div className={`accordion-title ${isExpanded ? 'active' : ''}`} onClick={toggleAccordion}>
-        {title}
+    <div className="accordion-container" style={{...style, marginTop: "20px"}}>
+      <div style={{padding: "10px", fontSize: "20px"}}  className={`accordion-title ${isExpanded ? 'active' : ''}`} onClick={toggleAccordion}>
+        <p>{title}</p>
       </div>
       <div className={`accordion-content ${isExpanded ? 'open' : ''}`}>
         {children}
