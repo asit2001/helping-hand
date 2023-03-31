@@ -1,7 +1,7 @@
 import "./Styles/UserDetails.css";
 
 import {FaMapMarkerAlt,FaStar} from "react-icons/fa"
-// import { DollarBag, RightArrow } from "../../Logo";
+import { DollarBag, RightArrow } from "../../Logo";
 export default function UserDetails() {
   return (
       <div className="mainDiv">
@@ -115,7 +115,7 @@ export default function UserDetails() {
               <span className="bal">Lifetime Earnings</span>
             </p>
             <div className="credit-card-el-amount">
-            {/* <DollarBag/> */}
+            <DollarBag/>
             <h3 className="amount">₹87,500</h3>
             </div>
 
@@ -128,14 +128,14 @@ export default function UserDetails() {
           
           <div className="parent">
             <div className="div1">
-             {/* <RightArrow/> */}
+             <RightArrow/>
             </div>
             <div className="div2">Rahul Mohan</div>
             <div className="div3">
               <strong className="plus-symbol">+</strong> ₹3500{" "}
             </div>
             <div className="div4">
-              {/* <RightArrow/> */}
+              <RightArrow/>
             </div>
             <div className="div5">Urvashi Shringla</div>
             <div className="div6">
@@ -144,7 +144,7 @@ export default function UserDetails() {
             </div>
             <div className="div7">
               {" "}
-              {/* <RightArrow/> */}
+              <RightArrow/>
             </div>
             <div className="div8">Hardik Khandelwal</div>
             <div className="div9">
