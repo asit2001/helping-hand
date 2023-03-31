@@ -29,7 +29,7 @@ function Home() {
         popular: [...servicesdata.slice(-5)],
       },
     ];
-    // console.log(servicesdata)
+    console.log(servicesdata)
     seServicesList([...newdata]);
   }, [servicesdata]);
 
