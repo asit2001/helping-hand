@@ -35,6 +35,12 @@ const slidesImg = [
     imgurl:
       "https://images.pexels.com/photos/3992875/pexels-photo-3992875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
+  {
+    title: "",
+    subtitle: "",
+    imgurl:
+      "https://images.pexels.com/photos/5331118/pexels-photo-5331118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
 ];
 
 function Slider() {
