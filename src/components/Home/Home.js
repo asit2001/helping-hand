@@ -29,6 +29,7 @@ function Home() {
         popular: [...servicesdata.slice(-5)],
       },
     ];
+    // console.log(servicesdata)
     seServicesList([...newdata]);
   }, [servicesdata]);
 
@@ -52,20 +53,15 @@ function Home() {
         );
       })}
 
-      {/* {anotherServiceData.map((othersevice,idx)=>{
-          return <div key={'other'+idx}>         
-            <OtherServices servicelist={othersevice} idx={idx}/>
-            {idx === 0 && <WhyOurMarket />}
-            {idx === 1 && <HowItWorks />}
-          </div>
-        })} */}
-      {servicesList.length > 0 && Object.values(servicesList[0])
+      
+      {servicesList.length > 0 && Object.values(servicesdata)
         .flat()
         .filter((data) => {
           return (
+            data.category === "home renovation" ||
             data.category === "cleaning" ||
-            data.category === "carpenters" ||
-            data.category === "plumber"
+            data.category === "electrician"||
+            data.category === "event management"
           );
         })
         .map((othersevice, idx) => {
