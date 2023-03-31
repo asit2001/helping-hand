@@ -2,7 +2,10 @@ import "./Styles/UserDetails.css";
 
 import {FaMapMarkerAlt,FaStar} from "react-icons/fa"
 import { DollarBag, RightArrow } from "../../Logo";
+import { useLocation } from "react-router-dom";
 export default function UserDetails() {
+  const {state} = useLocation();
+  console.log(state);
   return (
       <div className="mainDiv">
         <div className="div1">

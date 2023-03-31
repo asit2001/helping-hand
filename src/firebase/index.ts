@@ -1,5 +1,5 @@
 import { initializeApp} from "firebase/app";
-import { getDatabase, ref, onValue, set} from "firebase/database";
+import { getDatabase, ref, onValue, set,get} from "firebase/database";
 import {createUserWithEmailAndPassword,getAuth, signInWithEmailAndPassword} from 'firebase/auth'
 import { AllServices } from "../type";
 const firebaseConfig = {
@@ -26,7 +26,7 @@ export default function getAllData(setData:React.Dispatch<React.SetStateAction<A
 }
 
 export async function registerUser(name:string,email:string,password:string) {
-  try {
+
     let res = await createUserWithEmailAndPassword(auth,email,password);
     let uid = res.user.uid;
     let db = getDatabase();
@@ -34,12 +34,8 @@ export async function registerUser(name:string,email:string,password:string) {
       name,
       email
     })
-  } catch (error) {
-    console.log(error);
-  }
 }
 export async function registerServerProvider(name:string,email:string,password:string,title:string,category:string,mob:string,add1:string,add2:string,city:string,pin:string,country:string="INDIA") {
-  try {
   let res = await createUserWithEmailAndPassword(auth,email,password);
   let db = getDatabase();
   set(ref(db,'provider/'+res.user.uid),{
@@ -53,20 +49,19 @@ export async function registerServerProvider(name:string,email:string,password:s
     pin,
     country
   })
-  } catch (error) {
-    console.log(error);
-    
-  }  
 }
-export async function login(email:string,password:string,callBack:React.Dispatch<React.SetStateAction<Error>>,provider:boolean=false){
-  let res = await signInWithEmailAndPassword(auth,email,password);
-  let uid = res.user.uid;
-  let url = provider?"provider/":"users/"
-  const db = getDatabase();
-  const Ref = ref(db, url + uid);
-  onValue(Ref, (snapshot) => {
-    callBack(snapshot.val());
-  },(err=>{
-    callBack(err);
-  }))
+export async function login(email:string,password:string,provider:boolean=false){
+    let res = await signInWithEmailAndPassword(auth,email,password);
+    let uid = res.user.uid;
+    let url = provider?"provider/":"users/"
+    const db = getDatabase();
+    const Ref = ref(db, url + uid);
+    const [token,data]  = await Promise.all([res.user.getIdToken(),(await get(Ref)).val()]);
+    if (data) {
+      localStorage.setItem('auth',token);
+      return {...data,token}
+    }else{
+      throw({message:`You are not a ${url.replace("/","")}`});
+    }
+
 }

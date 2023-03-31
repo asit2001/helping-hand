@@ -1,23 +1,24 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import MypasswordPana from "../Logo/MypasswordPana";
 import {login} from '../../firebase'
 import DropDown from "./DropDown";
 
 const optionList =  ['user','serviceprovider']
 function UserSingIn() {
+  const navigate = useNavigate();
   const [loginInfo,setLoginInfo] = useState({
     email:"",
     password:""
   });
   const [selectDropdown,setSelectDropDown] = useState('user');
-  const [user,setUser] = useState();
+  const [error,setError] = useState();
   function logIn(e){
     e.preventDefault();
     if (selectDropdown==="user") {
-      login(loginInfo.email,loginInfo.password,setUser);
+      login(loginInfo.email,loginInfo.password).then((data)=>navigate("/",{state:data})).catch(e=>setError(e.message));
     }else{
-      login(loginInfo.email,loginInfo.password,setUser,false);
+      login(loginInfo.email,loginInfo.password,true).then(data=>navigate("/dashboard",{state:data})).catch(e=>setError(e.message));
     }
   }
   return (
