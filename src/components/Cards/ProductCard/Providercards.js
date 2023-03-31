@@ -8,7 +8,7 @@ export function Providercards(props) {
             <div id="part1">
                 <img id="profile" src="https://img.freepik.com/free-psd/3d-illustration-person_23-2149436192.jpg?w=2000" alt=''/>
                 <div id="name">
-                    <h5 style={{ fontSize: "22px" }}>{name}</h5>
+                    <h5 style={{ fontSize: "22px", textTransform:'capitalize' }}>{name}</h5>
                     <p>Service Provider</p>
                 </div>
             </div>
