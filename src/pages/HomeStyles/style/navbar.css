@@ -22,6 +22,15 @@
     align-items: center;
     overflow: hidden;
   }
+  .mob_menu{
+    width: 100%;
+    text-decoration: none;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(233, 233, 233);
+    text-align: center;
+    color: black;
+    letter-spacing: 1px;
+  }
   .mobile-nav form{
     width: 80%;
     height: 40px;
@@ -87,6 +96,11 @@
   }
   .com_nav .nav-wrapper .nav-links .nav-links-menu{
     cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+  .com_nav .nav-wrapper .nav-links .nav-links-menu:active{
+    color: var(--color-bglight-dashboard);
   }
   
   .com_nav .nav-wrapper .nav-links form{

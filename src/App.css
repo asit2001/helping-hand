@@ -1,3 +1,245 @@
+/* Login SignUp CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.login *{
+    font-family: "Poppins", cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* box-shadow: 0 0 5px rgba(186, 104, 200, 0.5); */
+}
+
+.login{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+   background: #0f0c29; 
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+ 
+}
+
+.register{
+  max-width: 978px;
+  width: 100vw;
+  height: 90vh;
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  /* box-shadow: 1px 3px 10px */
+   box-shadow: 0 3px 20px #ba68c8;
+  background-color: white;
+}
+
+.register span{
+  color: #adb5bd;
+}
+
+#form{
+  max-width: 320px;
+  width: 100vw;
+  margin: 1em auto;
+}
+#form input{
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+  padding: .9em 1em;
+}
+#form > .btn{
+  border: none;
+  border-radius: 10px;
+  padding: .9em 1em;
+}
+
+#form > input:focus{
+  outline: none;
+}
+
+#form > .btn{
+  background-color: #ba68c8;
+  color: #e9ecef;
+  font-size: 1em;
+  cursor: pointer;
+  transition: box-shadow .5s, transform .5s;
+}
+#form .btn:hover{
+  box-shadow: 0 5px 10px rgb(0, 0, 0,.3);
+  transform: translateY(-2px);
+}
+
+.flex{
+  display: flex;
+  gap: .8em;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.register .col-1{
+  margin: auto;
+  /* padding: 3em 0; */
+  position: relative;
+}
+.iconBack{
+  position: absolute;
+  left: 10px;
+  top: 0;
+  cursor: pointer;
+}
+
+.register .col-2 {
+  width: 480px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register .col-3 {
+  width: 480px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register .col-3 .LoginSvg{
+  width: 75%;
+}
+
+.register .col-2 .signupSvg{
+  width: 80%;
+}
+.register .col-2 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-self: flex-end;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* display: none; */
+}
+.register .userError{
+  color: red;
+  font-size: .7rem;
+}
+.register .userError::before{
+  content: '*';
+}
+
+
+#form select {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+  padding: .9em 1em;
+  cursor: pointer;
+}
+
+
+
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.userSelect {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userSelect:hover {
+  background-color: #ddd;
+}
+
+.categories {
+  position: absolute;
+  max-height: 200px;
+  top: 100%;
+  left: 0;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.categories:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -10px;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #f2f2f2 transparent transparent transparent;
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.option:last-child {
+  border-bottom: none;
+}
+
+.option:hover {
+  background-color: #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 844px)  {
+  .register .col-2,
+  .register .col-3{
+    display: none;
+  }
+
+  #form{
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+
+
+
+
+
+/*  Media Querry Prabhjot Rihal  */
 @media only screen and (max-width: 1370px){
     .howitwork_container_wrap{
       flex-direction: column;

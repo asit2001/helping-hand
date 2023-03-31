@@ -6,6 +6,9 @@ import './App.css'
 import Services from './pages/Services';
 import PaymentPage from './components/Payment/PaymentPage';
 import ErrorPage from './pages/ErrorPage';
+import UserSingIn from './components/LoginSignup/UserSingIn';
+import UserSignUp from './components/LoginSignup/UserSignUp'
+
 
 const router = createBrowserRouter([{
   path:"/",
@@ -17,6 +20,14 @@ const router = createBrowserRouter([{
 {
   path:"/services/:id",
   element:<Services/>
+},
+{
+  path:"/signin",
+  element:<div className="login"><UserSingIn/></div>
+},
+{
+  path:"/signup",
+  element:<div className="login"><UserSignUp/></div>
 },
 {
   path:"/services/payment",
