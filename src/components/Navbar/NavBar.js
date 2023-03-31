@@ -10,7 +10,7 @@ const NavMenu = [
   { icon: "", title: "Blog", link: "" },
   { icon: "", title: "Home", link: "" },
   { icon: "", title: "Help", link: "" },
-  { icon: "", title: "Login/Sign Up", link: "" },
+  { icon: "", title: "Login/Sign Up", link: "signin" },
 ];
 
 function NavBar() {
