@@ -54,6 +54,14 @@
   .arrow-icon:hover{
     opacity: 1;
   }
+  .arrow-icon_left{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;    
+  }
+  .arrow-icon_right{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; 
+  }
   .services__list .services__list_wrap{
     height: 100%;
     display: flex;

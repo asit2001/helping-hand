@@ -39,13 +39,13 @@ function Services({ heading, servicelist, idx }) {
         <div className="services__list__arrows services__list__arrows_left">
 
           <FaArrowLeft  onClick={handleleftmove}
-            className="arrow-icon"
+            className="arrow-icon arrow-icon_left"
            />
         </div>
         <div className="services__list__arrows services__list__arrows_right">
           <FaArrowRight
             onClick={handlerightmove}
-            className="arrow-icon"
+            className="arrow-icon arrow-icon_right"
            
           />
         </div>
