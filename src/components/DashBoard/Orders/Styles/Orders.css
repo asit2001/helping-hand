@@ -10,7 +10,7 @@
 .order__title,.order__details{
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 2fr 1fr 1fr 1fr;
-    margin: 15px 0;
+    margin: 5px 0;
 }
 .order__title__item,.order__details__item{
     margin: 5px;
@@ -71,20 +71,19 @@
         flex-direction: column;
         position: relative;
         padding-bottom: 20px;
-        box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.3),
-                    0px -2px 16px 0px rgba(0,0,0,0.22);
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
         border-radius: 5px;
-        background-image: url(https://img.freepik.com/free-vector/minimalist-white-background-with-neumorphic-circle_1017-39167.jpg),linear-gradient(var(--color-bg-dashboard),var(--color-dark-purple));
-        background-blend-mode: overlay;
+        /* background-image: url(https://img.freepik.com/free-vector/minimalist-white-background-with-neumorphic-circle_1017-39167.jpg),linear-gradient(var(--color-bg-dashboard),var(--color-dark-purple)); */
+        /* background-blend-mode: overlay; */
     }
     .order__details__sm{
         display: inline;
         font-weight: 500;
-        color: var(--color-white);
+        color: var(--color-dark-purple);
         margin-right: 10px;
     }
     .order__details__item{
-        color: #9f9f9f;
+        color: #585757;
     }
     .order__details__item:nth-child(2){
         order: 2;

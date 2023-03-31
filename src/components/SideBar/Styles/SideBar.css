@@ -76,6 +76,7 @@
     }
     .dashboard__container__left{
         flex: none;
+        border-radius: 0;
     }
     .container__left__list{
         padding-left: 10px;
