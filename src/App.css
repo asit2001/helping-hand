@@ -24,7 +24,7 @@
 .register{
   max-width: 978px;
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
   display:flex;
   flex-direction: row-reverse;
   justify-content: center;
