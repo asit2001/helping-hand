@@ -12,13 +12,13 @@ function Footer() {
     <div className='footer'>
         <img className='footerwhitedottexture' src={whitedottexture} alt=''/>
         <div className='footer_wrap'>
-            <div className='col-1'>
+            <div className='footer_wrap_col-1'>
                 <div className='col-1_logo'>
                     <Logo />
                 </div>
                 <div className='col-1_subtitle'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
             </div>
-            <div className='col-2'>
+            <div className='footer_wrap_col-2'>
                 <div className='footer_head'>Contact Info</div>
                 <ul>
                     <li>41/1, Hilton Mall, NY City New York</li>
@@ -26,10 +26,10 @@ function Footer() {
                     <li>help@mail.com</li>
                 </ul>
             </div>
-            <div className='col-3'>
+            <div className='footer_wrap_col-3'>
                 <div className='footer_head'>Recent News</div>
             </div>
-            <div className='col-4'>
+            <div className='footer_wrap_col-4'>
                 <div className='footer_head'>Subscribe Newsletter</div>
                 <div>Get the latest creative news from Qixer template</div>
                 <form>
