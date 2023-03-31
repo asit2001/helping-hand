@@ -5,6 +5,7 @@ import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import './App.css'
 import Services from './pages/Services';
 import PaymentPage from './components/Payment/PaymentPage';
+import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([{
   path:"/",
@@ -23,7 +24,7 @@ const router = createBrowserRouter([{
 },
 {
   path:"*",
-  element:''
+  element:<ErrorPage/>
 },
 ])
 function App() {
