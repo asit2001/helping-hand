@@ -8,6 +8,7 @@ import PaymentPage from './components/Payment/PaymentPage';
 import ErrorPage from './pages/ErrorPage';
 import UserSingIn from './components/LoginSignup/UserSingIn';
 import UserSignUp from './components/LoginSignup/UserSignUp'
+import Summary from './pages/Summary';
 
 
 const router = createBrowserRouter([{
@@ -28,6 +29,10 @@ const router = createBrowserRouter([{
 {
   path:"/signup",
   element:<div className="login"><UserSignUp/></div>
+},
+{
+path:"/summary",
+element:<Summary/>
 },
 {
   path:"/services/payment",

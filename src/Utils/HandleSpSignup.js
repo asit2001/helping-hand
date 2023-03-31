@@ -8,8 +8,8 @@ export function ValidSpForm1(formdata){
     else if(!ValidateEmail(email)){
         return 'Please enter a valid email'
     }
-    else if(password.length < 4){
-        return 'password must minimum length 4'
+    else if(password.length < 6){
+        return 'password must minimum length 6'
     }
     else if((confirm_password.length === 0 || password !== confirm_password)){
         return 'password not match'

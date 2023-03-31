@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import MypasswordPana from "../Logo/MypasswordPana";
+import {login} from '../../firebase'
 import DropDown from "./DropDown";
 
 const optionList =  ['user','serviceprovider']
 function UserSingIn() {
-  const [selectDropdown,setSelectDropDown] = useState('user')
+  const [loginInfo,setLoginInfo] = useState({
+    email:"",
+    password:""
+  });
+  const [selectDropdown,setSelectDropDown] = useState('user');
+  const [user,setUser] = useState();
+  function logIn(e){
+    e.preventDefault();
+    if (selectDropdown==="user") {
+      login(loginInfo.email,loginInfo.password,setUser);
+    }else{
+      login(loginInfo.email,loginInfo.password,setUser,false);
+    }
+  }
   return (
     <section>
       <div className="register">
@@ -14,19 +28,22 @@ function UserSingIn() {
           <span>login and enjoy the service</span>
           <form
             id="form"
-            className="flex flex-col"     
+            className="flex flex-col" 
+            onSubmit={logIn}    
           >
            
             <DropDown name={selectDropdown} changeName={setSelectDropDown} droplist={optionList} />
             <input
-              type="text"             
-              placeholder="username"
+              type="email"             
+              placeholder="Email Address"
+              onChange={e=>{setLoginInfo({...loginInfo,email:e.target.value})}}
             />
             <input
               type="password"
               placeholder="password"
+              onChange={e=>{setLoginInfo({...loginInfo,password:e.target.value})}}
             />
-            <button className="btn" type="button">
+            <button className="btn">
               Log In
             </button>
           </form>
