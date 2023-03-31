@@ -66,7 +66,7 @@ export default function UserSignUp() {
       ...formdata,
     });
     const {username,email,password} = {...userData,...formdata};
-    registerUser(username,email,password);
+    registerUser(username,email,password).then(e=>navigate("/")).catch(e=>setError({status:true,msg:e.message}));
     setError({
       ...error,
       status: false,
@@ -108,8 +108,8 @@ export default function UserSignUp() {
     setSP(pre=>{
       if (!obj) {
         let {username,shopname,pincode,password,mobile,email,country,city,address1,address2} = {...pre,...formdata};
-        registerServerProvider(username,email,password,shopname,catagery,mobile,address1,address2,city,pincode,country);
-        navigate("/signin");
+        registerServerProvider(username,email,password,shopname,catagery,mobile,address1,address2,city,pincode,country).then(()=>navigate("/signin"))
+        .catch(e=> e=>setError({status:true,msg:e.message}))
       }
       return {...pre,...formdata}
     });
