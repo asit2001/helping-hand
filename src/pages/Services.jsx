@@ -81,9 +81,9 @@ export default function Services() {
                 </div>
 
 
-                <h1 style={{ margin: "20px" }}>Our service Providers</h1>
+                <h1 id="headheadlast" style={{ margin: "20px" , textAlign: "center"}}>Our service Providers</h1>
                 <div className='cards'>
-                    {data.services === undefined ? "" : data.services.map((e) => <Providercards obt={e} />)}
+                    {data.services === undefined ? "" : data.services.map((e, idx) => <Providercards key={idx} obt={e} />)}
                 </div>
             </div>
         </>
