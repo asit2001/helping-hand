@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch,faBars } from "@fortawesome/free-solid-svg-icons";
 import {motion} from 'framer-motion';
-import '../../style/navbar.css'
+import '../../pages/HomeStyles/style/navbar.css'
+import { NavLink } from "react-router-dom";
 
 
 const NavMenu = [
@@ -32,9 +33,9 @@ function NavBar() {
       initial={{y:-30,opacity:0}}
       transition={{duration:2,delay:1.5,type:'spring',bounce:.5}}
       className="nav-wrapper">
-        <div className="nav-logo">
+        <NavLink className="nav-logo">
            Helping Hand
-        </div>
+        </NavLink>
         <div className="nav-links">
           <form>
             <input type={"text"} placeholder="Search for services" />

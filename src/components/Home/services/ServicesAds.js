@@ -1,5 +1,5 @@
 import React from "react";
-import '../../../style/servicesAds.css'
+import '../../../pages/HomeStyles/style/servicesAds.css'
 
 const adsUrl = [
   "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/home-screen/1678463309015-2b92d2.jpeg",

@@ -4,7 +4,7 @@ import React from 'react'
 import SubFooter from './SubFooter'
 import whitedottexture from '../../images/grunge_detailed_dusty_overlay_texture_2804.jpg'
 import Logo from '../svg/Logo'
-import '../../style/footer.css'
+import '../../pages/HomeStyles/style/footer.css'
 
 function Footer() {
   return (

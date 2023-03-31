@@ -29,24 +29,24 @@ export default function Services() {
                         <div style={{ fontSize: "1rem", marginBottom: "5px" }}><h5 style={{ marginTop: "0" }}>{data.rating} ({data.bookingNumber} booking)</h5></div>
                         <p id="bar1" style={{ fontSize: "1rem", marginBottom: "5px" }}>Professional Service Guide</p>
                     </div>
-                    <img id="headimg" src={data.imgUrl === "" ? "https://ithemes.com/wp-content/uploads/2022/08/Services-Pages.png" : data.imgUrl} />
+                    <img id="headimg" src={data.imgUrl === "" ? "https://ithemes.com/wp-content/uploads/2022/08/Services-Pages.png" : data.imgUrl} alt=''/>
                 </header>
 
                 <div id="bar2">
                     <div id="box">
-                        <img src={Object.keys(data).length === 0 ? "https://ithemes.com/wp-content/uploads/2022/08/Services-Pages.png" : data.productImages[0].imgUrl !== "" ? data.productImages[0].imgUrl : "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/supply/customer-app-supply/1642525912071-bdb3c7.png"} />
+                        <img src={Object.keys(data).length === 0 ? "https://ithemes.com/wp-content/uploads/2022/08/Services-Pages.png" : data.productImages[0].imgUrl !== "" ? data.productImages[0].imgUrl : "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/supply/customer-app-supply/1642525912071-bdb3c7.png"} alt=''/>
                         <h5>Super saver Deal</h5>
                     </div>
                     <div id="box">
-                        <img src={Object.keys(data).length === 0 ? "https://ithemes.com/wp-content/uploads/2022/08/Services-Pages.png" : data.productImages[1].imgUrl !== "" ? data.productImages[1].imgUrl : "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1636471573202-d913f3.jpeg"} />
+                        <img src={Object.keys(data).length === 0 ? "https://ithemes.com/wp-content/uploads/2022/08/Services-Pages.png" : data.productImages[1].imgUrl !== "" ? data.productImages[1].imgUrl : "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1636471573202-d913f3.jpeg"} alt=''/>
                         <h5>Quick Installation</h5>
                     </div>
                     <div id="box">
-                        <img src={Object.keys(data).length === 0 ? "https://ithemes.com/wp-content/uploads/2022/08/Services-Pages.png" : data.productImages[2].imgUrl !== "" ? data.productImages[2].imgUrl : "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/home-screen/1627621049998-083197.png"} />
+                        <img src={Object.keys(data).length === 0 ? "https://ithemes.com/wp-content/uploads/2022/08/Services-Pages.png" : data.productImages[2].imgUrl !== "" ? data.productImages[2].imgUrl : "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/home-screen/1627621049998-083197.png"} alt=''/>
                         <h5>Super saver Pack</h5>
                     </div>
                     <div id="box">
-                        <img src={Object.keys(data).length === 0 ? "https://ithemes.com/wp-content/uploads/2022/08/Services-Pages.png" : data.productImages[3].imgUrl !== "" ? data.productImages[3].imgUrl : "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/supply/customer-app-supply/1640239725633-779eb5.png"} />
+                        <img src={Object.keys(data).length === 0 ? "https://ithemes.com/wp-content/uploads/2022/08/Services-Pages.png" : data.productImages[3].imgUrl !== "" ? data.productImages[3].imgUrl : "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/supply/customer-app-supply/1640239725633-779eb5.png"} alt=''/>
                         <h5>Quality Products</h5>
                     </div>
                 </div>

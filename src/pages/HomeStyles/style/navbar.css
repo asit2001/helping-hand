@@ -59,6 +59,11 @@
   }
   .com_nav .nav-logo{
     cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+  .com_nav .nav-logo:active{
+    color: white;
   }
   .com_nav .nav-logo .log-head{
     width: 180px;

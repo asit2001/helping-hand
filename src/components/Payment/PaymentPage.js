@@ -1,6 +1,6 @@
 import { FaCaretDown } from "react-icons/fa";
 import React, { useState } from "react";
-import "../../style/payment.css";
+import "../../pages/HomeStyles/style/payment.css";
 import DebitCard from "./DebitCard";
 import cardImg from "../../images/cardimg.png";
 import upiimg from "../../images/QR Code-amico.png";

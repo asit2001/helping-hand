@@ -5,7 +5,7 @@ import womenspa from "../../../images/hair-straightener.png";
 import massagemen from "../../../images/massage (1).png";
 import massagewomen from "../../../images/massage.png";
 import { motion } from "framer-motion";
-import '../../../style/headservices.css'
+import '../../../pages/HomeStyles/style/headservices.css'
 
 const ServiceCard = [
   { icon: massagewomen, title: "Salon For Women", link: "" },

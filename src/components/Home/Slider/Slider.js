@@ -2,7 +2,7 @@ import React from "react";
 import slide1 from "../../../images/young-woman-346231_1920.jpg";
 import house from "../../../images/house.png";
 import { motion } from "framer-motion";
-import '../../../style/slider.css'
+import '../../../pages/HomeStyles/style/slider.css'
 
 function Slider() {
   return (

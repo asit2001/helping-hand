@@ -2,7 +2,7 @@ import {FaAngleRight,FaAngleLeft} from 'react-icons/fa'
 import React, { useRef } from "react";
 import quotesimg from "../../images/right-quote-sign.png";
 import whiteteture from '../../images/white-paper-texture.jpg'
-import '../../style/testimonial.css'
+import '../../pages/HomeStyles/style/testimonial.css'
 
 
 const TestimonialCards = [

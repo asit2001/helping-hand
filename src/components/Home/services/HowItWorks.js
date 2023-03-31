@@ -2,7 +2,7 @@ import React from "react";
 import texture from "../../../images/texture/4907157.jpg";
 import Tex from "../../svg/Tex";
 import { motion } from "framer-motion";
-import '../../../style/howitwork.css'
+import '../../../pages/HomeStyles/style/howitwork.css'
 
 let Steps = [
   {

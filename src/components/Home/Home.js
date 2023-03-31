@@ -30,17 +30,6 @@ function Home() {
       },
     ];
     seServicesList([...newdata]);
-    console.log(
-      Object.values(newdata[0])
-        .flat()
-        .filter((data) => {
-          return (
-            data.category === "cleaning" ||
-            data.category === "carpenters" ||
-            data.category === "plumber"
-          );
-        })
-    );
   }, [servicesdata]);
 
   return (

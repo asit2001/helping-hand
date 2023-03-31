@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../style/subfooter.css'
+import '../../pages/HomeStyles/style/subfooter.css'
 
 function SubFooter() {
   return (
