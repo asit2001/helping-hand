@@ -20,7 +20,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
+    position: relative;
+    z-index: -1;
   }
   .mob_menu{
     width: 100%;
@@ -165,6 +167,7 @@
   color: black;
   width: 100%;
   border-radius: 3px;
+  left: 0;
 }
 .nav_userLogin_option ul li{
   padding: .5rem;

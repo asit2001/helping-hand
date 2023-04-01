@@ -1,6 +1,6 @@
 import Home from './components/Home/Home';
 import Dashboard from "./pages/Dashboard";
-import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import {createBrowserRouter,redirect,RouterProvider} from 'react-router-dom'
 import './pages/HomeStyles/style/Homemediaquery.css'
 import './App.css'
 import Services from './pages/Services';
@@ -9,14 +9,20 @@ import ErrorPage from './pages/ErrorPage';
 import UserSingIn from './components/LoginSignup/UserSingIn';
 import UserSignUp from './components/LoginSignup/UserSignUp'
 import Summary from './pages/Summary';
-
+function checkLogin(){
+  if (localStorage.getItem("user") == null) {
+  return redirect("/signin");
+  }
+  return null;
+}
 
 const router = createBrowserRouter([{
   path:"/",
   element:<Home/>
 },{
   path:"/dashboard",
-  element:<Dashboard/>
+  element:<Dashboard/>,
+  loader:checkLogin
 },
 {
   path:"/services/:id",
@@ -36,7 +42,8 @@ element:<Summary/>
 },
 {
   path:"/services/payment",
-  element:<PaymentPage />
+  element:<PaymentPage />,
+  loader:checkLogin
 },
 {
   path:"*",
