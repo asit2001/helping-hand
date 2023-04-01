@@ -6,7 +6,7 @@ import cardImg from "../../images/cardimg.png";
 import upiimg from "../../images/QR Code-amico.png";
 import circle2 from "../../images/circle2.png";
 import circle1 from "../../images/circle1.png";
-import {FaAngleLeft} from 'react-icons/fa'
+
 
 import { motion } from "framer-motion";
 import Other from "./Other";
@@ -18,7 +18,7 @@ function PaymentPage() {
   const {state} = useLocation();
   const navigate = useNavigate();
 
-  const [sucessMsg,setSucessMsg] = useState({status:false,msg:''})
+  // const [sucessMsg,setSucessMsg] = useState({status:false,msg:''})
  
   useEffect(()=>{
     if (state==null) {
@@ -32,10 +32,10 @@ function PaymentPage() {
     <div className="paymentPage">
     
       <div className="payment-holder">
-        <div className="paymentPage_head"> <FaAngleLeft /> Payment Method</div>
+        <div className="paymentPage_head" style={{fontSize:'1.3rem',fontWeight:'600' ,paddingBottom:'1rem'}}> Payment Method</div>
         <div className="order">
           <div>Services Name</div>
-          <div>&#8377;{state.price}</div>
+          <div>&#8377;{state?.price}</div>
         </div>
         <div className="playmentCard">
           <img
