@@ -2,10 +2,12 @@ import {RiArrowDownSLine } from "react-icons/ri";
 import {IoIosSearch} from 'react-icons/io';
 import {HiOutlineAdjustmentsHorizontal as AdjustIcon} from 'react-icons/hi2';
 import {CiBellOn} from 'react-icons/ci';
+import { useState } from "react";
 
 import "./styles/DashBoardHeader.css";
 
 function DashBoardHeader() {
+  const [user] = useState(JSON.parse(localStorage.getItem("user")!));
   return (
     <div className="container__right__header">
         <div className="header__searchBox">
@@ -18,8 +20,8 @@ function DashBoardHeader() {
         </div>
         <div className="header__profile">
             <CiBellOn className="header__icon"/>
-            <img className="header__profile__img" src="https://i.pravatar.cc/150?u=ronaldo" alt="user profile" />
-            <p className="header__profile__name">Asit Biswas <RiArrowDownSLine/></p>
+            <img className="header__profile__img" src={`https://i.pravatar.cc/150?u=${user?.name}`} alt="user profile" />
+            <p className="header__profile__name">{user?.name} <RiArrowDownSLine/></p>
         </div>
     </div>
   )

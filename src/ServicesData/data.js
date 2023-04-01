@@ -11,41 +11,41 @@ export const ourMarketData = [
     icoColor: "6560FF",
     title: "Service Commitment",
     description:
-      "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+      "Transform your service experience with our super experience commitment, designed to exceed your expectations.",
   },
   {
     icon: AiFillSetting,
     icoColor: "C71F66",
     title: "Super Experience",
     description:
-      "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+      "Get ready for a super experience with our unparalleled service quality and customer-focused approach.",
   },
   {
     icon: FaUserShield,
     icoColor: "378FFF",
     title: "User Data Secure",
     description:
-      "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+      "Rest easy knowing your user data is safe and secure with our robust security measures in place.",
   },
   {
     icon: BsSpeedometer,
     icoColor: "FF6B2C",
     title: "Fast Service",
     description:
-      "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+      "Get the speed you need with our fast and efficient service, designed to save you time and hassle.",
   },
   {
     icon: SiFsecure,
     icoColor: "0FC393",
     title: "Secure Payment",
     description:
-      "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+      "Experience peace of mind with our secure payment options, keeping your financial information safe and protected.",
   },
   {
     icon: FaHeadset,
     icoColor: "BE3EFF",
     title: "Dedicated Support",
     description:
-      "It is a long established fact that a reader will be distracted by the readable. It is a long established fact that a reader.",
+      "Enjoy personalized and dedicated support every step of the way with our customer-focused team.",
   },
 ];
