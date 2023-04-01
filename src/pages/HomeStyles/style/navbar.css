@@ -20,9 +20,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
-    position: relative;
-    z-index: -1;
+    overflow: hidden;
+    /* position: relative; */
+    /* z-index: -1; */
   }
   .mob_menu{
     width: 100%;
