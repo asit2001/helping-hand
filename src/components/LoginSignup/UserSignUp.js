@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SignupAmico from "../Logo/SignupAmico";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { HandleUserSignupError } from "../../Utils/HandleUserSignup";
 import {
   ValidSpForm1,
@@ -9,6 +9,7 @@ import {
 } from "../../Utils/HandleSpSignup";
 import DropDown from "./DropDown";
 import { FaArrowLeft } from "react-icons/fa";
+import { registerServerProvider, registerUser } from "../../firebase";
 
 
 const categories = ["user" , "serviceprovider"];
@@ -32,7 +33,7 @@ export default function UserSignUp() {
   const [error, setError] = useState({ status: false, msg: "" });
   const [userData, setUserData] = useState({});
   const [spData, setSP] = useState({});
-
+  const navigate = useNavigate();
 
   
     const [user,serviceprovider] = useState('user')
@@ -64,7 +65,8 @@ export default function UserSignUp() {
       ...userData,
       ...formdata,
     });
-
+    const {username,email,password} = {...userData,...formdata};
+    registerUser(username,email,password).then(e=>navigate("/")).catch(e=>setError({status:true,msg:e.message}));
     setError({
       ...error,
       status: false,
@@ -102,16 +104,20 @@ export default function UserSignUp() {
         ...obj,
       });
     }
-    setSP({
-      ...spData,
-      ...formdata,
+
+    setSP(pre=>{
+      if (!obj) {
+        let {username,shopname,pincode,password,mobile,email,country,city,address1,address2} = {...pre,...formdata};
+        registerServerProvider(username,email,password,shopname,catagery,mobile,address1,address2,city,pincode,country).then(()=>navigate("/signin"))
+        .catch(e=> e=>setError({status:true,msg:e.message}))
+      }
+      return {...pre,...formdata}
     });
   }
   return (
     <section>
       <div className="register">
         <div className="col-1">
-          {console.log(userData)}
           {(forms.form2 || forms.addressForm ) && <FaArrowLeft onClick={()=>{
             forms.form2?
             setforms({...forms,form1:true,form2:false,addressForm:false}) 

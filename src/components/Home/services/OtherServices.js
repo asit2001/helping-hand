@@ -19,7 +19,7 @@ function OtherServices({ servicelist, heading ,idx }) {
         <div className="otherServies-wrap_Serviceslist"
         >
           <div className="otherServies-wrap_Serviceslist_wrap">
-            {servicelist.map((services, idx) => {
+            {servicelist.slice(0,4).map((services, idx) => {
               return (
                 <motion.div 
                   onClick={e=>handleOpenServicesPage(services,services.serviceName)}                 
