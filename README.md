@@ -58,11 +58,7 @@ nmp start
 
 ## Contributor
 
-<img src="https://avatars.githubusercontent.com/u/58361325?v=4" height="50px" style="border-radius:50%; margin-right:20px">
-<img src="https://avatars.githubusercontent.com/u/117853511?s=96&v=4" height="50px" style="border-radius:50%; margin-right:20px">
-<img src="https://avatars.githubusercontent.com/u/73590084?v=4" height="50px" style="border-radius:50%; margin-right:20px">
-<img src="https://avatars.githubusercontent.com/u/108420904?v=4" height="50px" style="border-radius:50%; margin-right:20px">
-<img src="https://avatars.githubusercontent.com/u/80124042?v=4" height="50px" style="border-radius:50%; margin-right:20px">
+<img src="https://avatars.githubusercontent.com/u/58361325?v=4" height="50px" style="border-radius:50%; margin-right:20px"><img src="https://avatars.githubusercontent.com/u/117853511?s=96&v=4" height="50px" style="border-radius:50%; margin-right:20px"><img src="https://avatars.githubusercontent.com/u/73590084?v=4" height="50px" style="border-radius:50%; margin-right:20px"><img src="https://avatars.githubusercontent.com/u/108420904?v=4" height="50px" style="border-radius:50%; margin-right:20px"><img src="https://avatars.githubusercontent.com/u/80124042?v=4" height="50px" style="border-radius:50%; margin-right:20px">
 
 ## License
 
