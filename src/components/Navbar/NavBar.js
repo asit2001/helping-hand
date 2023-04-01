@@ -4,6 +4,7 @@ import { faSearch,faBars } from "@fortawesome/free-solid-svg-icons";
 import {motion} from 'framer-motion';
 import '../../pages/HomeStyles/style/navbar.css'
 import { NavLink } from "react-router-dom";
+import navlogo from '../../images/NavLogo.jpeg'
 
 
 const NavMenu = [
@@ -34,7 +35,8 @@ function NavBar() {
       transition={{duration:2,delay:1.5,type:'spring',bounce:.5}}
       className="nav-wrapper">
         <NavLink className="nav-logo">
-           Helping Hand
+           {/* Helping Hand */}
+           <img src={navlogo} alt="" width={130}/>
         </NavLink>
         <div className="nav-links">
           <form>

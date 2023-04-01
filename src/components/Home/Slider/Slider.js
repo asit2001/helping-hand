@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import slide1 from "../../../images/young-woman-346231_1920.jpg";
+// import slide1 from "../../../images/young-woman-346231_1920.jpg";
 // import house from "../../../images/house.png";
 import { AnimatePresence, motion } from "framer-motion";
 import "../../../pages/HomeStyles/style/slider.css";
@@ -8,7 +8,8 @@ const slidesImg = [
   {
     title: "",
     subtitle: "",
-    imgurl: slide1,
+    imgurl:
+      "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     title: "",
@@ -27,6 +28,18 @@ const slidesImg = [
     subtitle: "",
     imgurl:
       "https://images.pexels.com/photos/7217957/pexels-photo-7217957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    title: "",
+    subtitle: "",
+    imgurl:
+      "https://images.pexels.com/photos/3992875/pexels-photo-3992875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    title: "",
+    subtitle: "",
+    imgurl:
+      "https://images.pexels.com/photos/5331118/pexels-photo-5331118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
 ];
 
@@ -64,22 +77,31 @@ function Slider() {
   return (
     <div className="slider">
       <div className="slider-wrapper" style={{ overflow: "hidden" }}>
-        <div className="slide-filter"></div>
+        {/* <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          key={img.imgurl}
+          className="slide-filter"
+        ></motion.div> */}
         <div className="slide1">
           <AnimatePresence initial={false}>
             <motion.img
               variants={variants}
               animate="animate"
               initial="initital"
+              key={img.imgurl}
+              style={{filter:'brightness(0.7)'}}
               transition={{ ease: "easeInOut", type: "spring" }}
               // exit='exit'
-              key={img.imgurl}
+
               src={img.imgurl}
               alt=""
             />
           </AnimatePresence>
         </div>
         <div className="slide-text">
+          {/* <div>Hair care solutions</div> */}
           {/* <div>ONE-STOP SOLUTION</div>
           <div>
             FOR YOUR <img src={house} alt="" width={"50px"} />{" "}

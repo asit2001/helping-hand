@@ -1,7 +1,7 @@
 import Home from './components/Home/Home';
 import Dashboard from "./pages/Dashboard";
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
-
+import './pages/HomeStyles/style/Homemediaquery.css'
 import './App.css'
 import Services from './pages/Services';
 import PaymentPage from './components/Payment/PaymentPage';
