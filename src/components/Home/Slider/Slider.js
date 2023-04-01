@@ -77,13 +77,13 @@ function Slider() {
   return (
     <div className="slider">
       <div className="slider-wrapper" style={{ overflow: "hidden" }}>
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
           key={img.imgurl}
           className="slide-filter"
-        ></motion.div>
+        ></motion.div> */}
         <div className="slide1">
           <AnimatePresence initial={false}>
             <motion.img
@@ -91,6 +91,7 @@ function Slider() {
               animate="animate"
               initial="initital"
               key={img.imgurl}
+              style={{filter:'brightness(0.7)'}}
               transition={{ ease: "easeInOut", type: "spring" }}
               // exit='exit'
 
@@ -100,6 +101,7 @@ function Slider() {
           </AnimatePresence>
         </div>
         <div className="slide-text">
+          {/* <div>Hair care solutions</div> */}
           {/* <div>ONE-STOP SOLUTION</div>
           <div>
             FOR YOUR <img src={house} alt="" width={"50px"} />{" "}
