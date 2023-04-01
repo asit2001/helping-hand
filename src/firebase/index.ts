@@ -1,6 +1,6 @@
 import { initializeApp} from "firebase/app";
 import { getDatabase, ref, onValue, set,get} from "firebase/database";
-import {createUserWithEmailAndPassword,getAuth, signInWithEmailAndPassword} from 'firebase/auth'
+import {createUserWithEmailAndPassword,getAuth, signInWithEmailAndPassword, signOut} from 'firebase/auth'
 import { AllServices } from "../type";
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -59,9 +59,16 @@ export async function login(email:string,password:string,provider:boolean=false)
     const [token,data]  = await Promise.all([res.user.getIdToken(),(await get(Ref)).val()]);
     if (data) {
       localStorage.setItem('auth',token);
+      localStorage.setItem('user',data);
       return {...data,token}
     }else{
       throw({message:`You are not a ${url.replace("/","")}`});
     }
 
+}
+export function logOut(){
+  signOut(auth).then(()=>{
+    localStorage.removeItem("auth");
+    localStorage.removeItem("user");
+  })
 }

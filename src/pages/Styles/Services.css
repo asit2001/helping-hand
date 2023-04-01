@@ -143,12 +143,13 @@
 @media screen and (max-width : 600px) {
     #discount {
         grid-template-columns: repeat(1, 100%);
+        width: 90%;
     }
 }
 
 .cards {
     margin-top: 20px;
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -160,7 +161,7 @@
 #cards {
     /* border: 2px solid rgb(228, 228, 228); */
     width: 70%;
-    padding: 10px;
+    padding: 20px;
     border-radius: 20px;
     margin: 50px;
     box-shadow: 2px 2px 20px rgb(225, 225, 225);
@@ -191,6 +192,14 @@
     margin-left: 10px;
 }
 
+.part2img2 {
+    width: 90%;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
 .rz {
     font-size: 25px;
     color:orange;
@@ -198,10 +207,21 @@
 
 #profile {
     width: 9rem;
-    border-radius: 10px;
+    border-radius: 20px;
+}
+
+.midimg23 {
+    width: 98%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width : 768px) {
+
+    .midimg23 {
+        justify-content: center;
+    }
 
     #profile {
         width : 8rem;
@@ -274,7 +294,16 @@
     }
 
     #cards {
+        width: 100%;
+    }
+
+    .cards {
         width: 90%;
+    }
+
+    #cardp2 {
+        justify-content: center;
+        align-items: center;
     }
 }
 
