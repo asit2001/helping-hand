@@ -25,11 +25,13 @@ function NavBar() {
   const mobNavVariante = {
     isOpen :{
       opacity : 1,
-      height:'unset'
+      height:'unset',
+      overflow:'unset'
     },
     isClose:{
       height: 0,
       opacity : 0,
+      overflow:'hidden'
     }
   }
   function handlelogout(){
