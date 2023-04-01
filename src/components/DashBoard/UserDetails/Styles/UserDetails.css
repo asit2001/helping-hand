@@ -24,21 +24,16 @@
   width: 80%;
   margin: auto;
   padding-top: 2rem;
-  background-color: #f5d5ff;
   border-radius: 200px;
   margin-top: 20px;
 }
 
 .profile {
-  /* margin-top: -45px; */
   margin-left: auto;
   margin-right: auto;
   border-radius: 25px;
-  /* background-color: #fff; */
-  background-color: #f5d5ff;
   margin-bottom: 2rem;
   padding-top: 3rem;
-  /* padding-bottom: 4rem; */
   z-index: 0;
 }
 

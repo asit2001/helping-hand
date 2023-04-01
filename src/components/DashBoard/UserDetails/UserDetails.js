@@ -9,9 +9,9 @@ import {
 } from "react-icons/fa";
 import { DollarBag, RightArrow } from "../../Logo";
 import { useLocation, Link} from "react-router-dom";
+import {useState} from 'react'
 export default function UserDetails() {
-  const {state} = useLocation();
-  console.log(state);
+  const [user] = useState(JSON.parse(localStorage.getItem("user")));
   return (
     <div className="mainDiv">
       <div className="div1">
@@ -19,12 +19,12 @@ export default function UserDetails() {
           <div className="profile-body">
             <div className="photo">
               <img
-                src="https://i.imgur.com/uIgDDDd.jpg"
+                src={`https://i.pravatar.cc/150?u=${user?.name}`}
                 className="image--cover"
               />
             </div>
             <div className="profile">
-              <h1 className="username">Kiran Kumar</h1>
+              <h1 className="username">{user?.name}</h1>
 
               <h2 className="profession"> Event Planner </h2>
 
