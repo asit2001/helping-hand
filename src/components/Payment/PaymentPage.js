@@ -17,6 +17,9 @@ const paymentoption = ["Debit Card", "Other"];
 function PaymentPage() {
   const {state} = useLocation();
   const navigate = useNavigate();
+
+  const [sucessMsg,setSucessMsg] = useState({status:false,msg:''})
+ 
   useEffect(()=>{
     if (state==null) {
       navigate("/");
@@ -25,7 +28,9 @@ function PaymentPage() {
   const [selectPayament, setSelectPayment] = useState("Debit Card");
   const [selectOption, setSelectOption] = useState(false);
   return (
+    
     <div className="paymentPage">
+    
       <div className="payment-holder">
         <div className="paymentPage_head"> <FaAngleLeft /> Payment Method</div>
         <div className="order">
