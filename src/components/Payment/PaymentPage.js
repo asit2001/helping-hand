@@ -1,28 +1,41 @@
 import { FaCaretDown } from "react-icons/fa";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../pages/HomeStyles/style/payment.css";
 import DebitCard from "./DebitCard";
 import cardImg from "../../images/cardimg.png";
 import upiimg from "../../images/QR Code-amico.png";
 import circle2 from "../../images/circle2.png";
 import circle1 from "../../images/circle1.png";
-import {FaAngleLeft} from 'react-icons/fa'
+
 
 import { motion } from "framer-motion";
 import Other from "./Other";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const paymentoption = ["Debit Card", "Other"];
 
 function PaymentPage() {
+  const {state} = useLocation();
+  const navigate = useNavigate();
+
+  // const [sucessMsg,setSucessMsg] = useState({status:false,msg:''})
+ 
+  useEffect(()=>{
+    if (state==null) {
+      navigate("/");
+    }
+  },[state])
   const [selectPayament, setSelectPayment] = useState("Debit Card");
   const [selectOption, setSelectOption] = useState(false);
   return (
+    
     <div className="paymentPage">
+    
       <div className="payment-holder">
-        <div className="paymentPage_head"> <FaAngleLeft /> Payment Method</div>
+        <div className="paymentPage_head" style={{fontSize:'1.3rem',fontWeight:'600' ,paddingBottom:'1rem'}}> Payment Method</div>
         <div className="order">
           <div>Services Name</div>
-          <div>&#8377;450</div>
+          <div>&#8377;{state?.price}</div>
         </div>
         <div className="playmentCard">
           <img

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 function DebitCard() {
+  const navigate = useNavigate()
   const [debitCardInfo, setDebitCardInfo] = useState({
     holdername: "",
     expmoth: "",
@@ -9,6 +11,7 @@ function DebitCard() {
     cvv: "",
   });
   const [debitCardNumber, setDebitCardNumber] = useState("");
+  const [error,setError] = useState({status:false,msg:''})
 
   function handleCarddetailOnchange(e) {
     const { name, value } = e.target;
@@ -16,12 +19,11 @@ function DebitCard() {
       ...debitCardInfo,
       [name]: value,
     });
+    handleSetError(false,'')
   }
-  // function debitCardNumberOnchange(e) {
-  //   let number = e.target.value;
-  //   setDebitCardNumber(number);
-  // }
+  
   function debitCardNumberOnchange (event){
+    handleSetError(false,'')
     const { value } = event.target;
     const formattedValue = value
       .replace(/\s/g, '') // Remove all spaces
@@ -30,9 +32,37 @@ function DebitCard() {
       .substring(0, 19); // Limit input to 16 digits with 3 spaces
       setDebitCardNumber(formattedValue);
   };
+
+  function handleSetError(status,msg){
+    setError({
+      ...error,
+      status:status,
+      msg:msg
+    })
+  }
+
+  function handleDebitPay(e){
+    e.preventDefault();
+    if(debitCardInfo.holdername==='' && debitCardInfo.expyear==='' && debitCardInfo.expmoth==='' && debitCardInfo.cvv === '' && debitCardNumber === ''){
+      handleSetError(true,'All Field Are Required')
+      return
+    }
+    else if(debitCardInfo.holdername==='' || debitCardInfo.expyear==='' || debitCardInfo.expmoth==='' || debitCardInfo.cvv === '' || debitCardNumber === ''){
+      handleSetError(true,'All Field Are Required')
+      return
+    }
+    else if(debitCardNumber.length < 19){
+      handleSetError(true,'Please Enter Valid Card Number')
+      return
+    }
+
+    alert('Payment success')
+    navigate('/')
+  }
+
   return (
     <div className="card_container">
-      <form>
+      <form onSubmit={handleDebitPay}>
         <input
           placeholder="Card Holder Name"
           name="holdername"
@@ -70,7 +100,8 @@ function DebitCard() {
             onChange={handleCarddetailOnchange}
           />
         </div>
-        <button>Pay Now</button>
+        {error.status && <span style={{color:'red'}}>*{error.msg}</span>}
+        <button type="submit">Pay Now</button>
       </form>
     </div>
   );

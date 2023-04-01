@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500');
+
+#bodm * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 #bodm {
     width: 100%;
     display: flex;
@@ -45,7 +53,7 @@
     }
 
     #summary-flex>div {
-        width: 100%;
+        width: 100% !important;
     }
 
     #summary-flex>div:nth-child(2) {
@@ -72,7 +80,7 @@
 }
 
 #sum-btn {
-    background-color:rgb(8, 255, 131);
+    /* background-color:rgb(7, 201, 104); */
     border: none;
     padding: 10px;
     font-size: 17px;
@@ -97,7 +105,7 @@
 #sub-btn {
     width: 100%;
     margin-top: 30px;
-    background-color:rgb(195, 44, 195);
+    background-color:var(--color-bglight-dashboard);
     color: white;
     font-size: 20px;
     border: none;

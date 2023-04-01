@@ -1,18 +1,24 @@
 import React from "react";
 import menhair from "../../../images/hair-comb.png";
-import womenhair from "../../../images/hair-cutting.png";
 import womenspa from "../../../images/hair-straightener.png";
-import massagemen from "../../../images/massage (1).png";
-import massagewomen from "../../../images/massage.png";
+import home from "../../../images/home.png";
+import delivery from "../../../images/delivery.png";
+import cleaning from "../../../images/cleaning.png";
+import tiles from "../../../images/tiles.png";
+import Plumber from "../../../images/plumber.png";
+
+
 import { motion } from "framer-motion";
 import '../../../pages/HomeStyles/style/headservices.css'
 
 const ServiceCard = [
-  { icon: massagewomen, title: "Salon For Women", link: "" },
-  { icon: womenhair, title: "Hair,Skin & Nails", link: "" },
-  { icon: womenspa, title: "Spa For Women", link: "" },
+  { icon: delivery, title: "Relocation", link: "" },
+  { icon: cleaning, title: "Cleaning & Pest", link: "" },
+  { icon: womenspa, title: "Body Care", link: "" },
   { icon: menhair, title: "Salon For Men", link: "" },
-  { icon: massagemen, title: "Massage For Men", link: "" },
+  { icon: home, title: "Home Reparing", link: "" },
+  { icon: tiles, title: "Tile & Marble", link: "" },
+  { icon: Plumber, title: "Plumber", link: "" },
 ];
 
 function HeadServices() {
