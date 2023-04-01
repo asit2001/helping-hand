@@ -1,9 +1,14 @@
 import { FcMoneyTransfer, FcRating } from "react-icons/fc";
 import AccordionOwn from '../Accordion/AcoordionOwn';
 import { AiFillStar } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 export function Providercards(props) {
     const { details, discountedPrice, name, price, imgUrl } = props.obt;
+    const navigate = useNavigate();
+    function bookNow(){
+        navigate("/summary",{state:props.obt})
+    }
     return (<>
         <div id='cards'>
             <div id="part1">
@@ -39,7 +44,7 @@ export function Providercards(props) {
             </div>
 
             <div id='button'>
-                <button>Book Now</button>
+                <button onClick={bookNow}>Book Now</button>
             </div>
         </div>
     </>)

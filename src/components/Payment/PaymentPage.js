@@ -1,5 +1,5 @@
 import { FaCaretDown } from "react-icons/fa";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../pages/HomeStyles/style/payment.css";
 import DebitCard from "./DebitCard";
 import cardImg from "../../images/cardimg.png";
@@ -10,10 +10,18 @@ import {FaAngleLeft} from 'react-icons/fa'
 
 import { motion } from "framer-motion";
 import Other from "./Other";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const paymentoption = ["Debit Card", "Other"];
 
 function PaymentPage() {
+  const {state} = useLocation();
+  const navigate = useNavigate();
+  useEffect(()=>{
+    if (state==null) {
+      navigate("/");
+    }
+  },[state])
   const [selectPayament, setSelectPayment] = useState("Debit Card");
   const [selectOption, setSelectOption] = useState(false);
   return (
@@ -22,7 +30,7 @@ function PaymentPage() {
         <div className="paymentPage_head"> <FaAngleLeft /> Payment Method</div>
         <div className="order">
           <div>Services Name</div>
-          <div>&#8377;450</div>
+          <div>&#8377;{state.price}</div>
         </div>
         <div className="playmentCard">
           <img
