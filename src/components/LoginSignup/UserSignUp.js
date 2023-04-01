@@ -109,7 +109,7 @@ export default function UserSignUp() {
       if (!obj) {
         let {username,shopname,pincode,password,mobile,email,country,city,address1,address2} = {...pre,...formdata};
         registerServerProvider(username,email,password,shopname,catagery,mobile,address1,address2,city,pincode,country).then(()=>navigate("/signin"))
-        .catch(e=> e=>setError({status:true,msg:e.message}))
+        .catch(e=>setError({status:true,msg:e.message}))
       }
       return {...pre,...formdata}
     });
