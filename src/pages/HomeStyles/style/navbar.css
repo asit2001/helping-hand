@@ -20,7 +20,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
+    position: relative;
+    z-index: -1;
   }
   .mob_menu{
     width: 100%;
@@ -91,7 +93,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
     height: 100%;
   }
   .com_nav .nav-wrapper .nav-links .nav-links-menu{
@@ -135,4 +137,48 @@
 
 
 
-  
+.nav_userLogin{
+  position: relative;
+}
+.nav_userLogin_details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.nav_userImg{
+  background-color: var(--color-bglight-dashboard);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav_userLogin_option{
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: 100%;
+  border-radius: 3px;
+  left: 0;
+}
+.nav_userLogin_option ul li{
+  padding: .5rem;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+.nav_userLogin_option ul li:not(:last-child){
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+.nav_userLogin_option ul li:hover{
+  background-color: rgb(240, 240, 240);
+  border-radius: 3px;
+}
