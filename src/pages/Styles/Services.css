@@ -143,6 +143,7 @@
 @media screen and (max-width : 600px) {
     #discount {
         grid-template-columns: repeat(1, 100%);
+        width: 90%;
     }
 }
 
@@ -206,7 +207,7 @@
 
 #profile {
     width: 9rem;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .midimg23 {

@@ -7,7 +7,7 @@ export function Providercards(props) {
     return (<>
         <div id='cards'>
             <div id="part1">
-                <img id="profile" src="https://img.freepik.com/free-psd/3d-illustration-person_23-2149436192.jpg?w=2000" alt='' />
+                <img id="profile" src={props.pics[props.idx]} alt='' />
                 <div id="name">
                     <h5 style={{ fontSize: "30px", textTransform: 'capitalize' }}>{name}</h5>
                     <p>Service Provider</p>
@@ -26,10 +26,10 @@ export function Providercards(props) {
                 <div id="rate" >
                     <AiFillStar className='rz' />
                     <AiFillStar className='rz' />
-                    
+
                     <AiFillStar className='rz' />
                     <AiFillStar className='rz' />
-                    <p style={{ fontSize: "20px", color: "red" , margin: "10px 0px 20px 0px"}}>Overall Reviews: 2K</p>
+                    <p style={{ fontSize: "20px", color: "red", margin: "10px 0px 20px 0px" }}>Overall Reviews: 2K</p>
                 </div>
                 <div className="midimg23"><img className="part2img2" src={imgUrl === "" ? "https://1.cms.s81c.com/sites/default/files/2021-06-23/Financial_Services.png" : imgUrl} /></div>
                 <div style={{ display: "flex", justifyContent: "left", flexDirection: "column", alignItems: "left" }}>
