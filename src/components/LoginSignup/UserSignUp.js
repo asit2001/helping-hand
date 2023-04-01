@@ -66,7 +66,7 @@ export default function UserSignUp() {
       ...formdata,
     });
     const {username,email,password} = {...userData,...formdata};
-    registerUser(username,email,password).then(e=>navigate("/")).catch(e=>setError({status:true,msg:e.message}));
+    registerUser(username,email,password).then(e=>navigate("/signin")).catch(e=>setError({status:true,msg:e.message}));
     setError({
       ...error,
       status: false,
