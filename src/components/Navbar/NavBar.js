@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch,faBars } from "@fortawesome/free-solid-svg-icons";
 import {motion} from 'framer-motion';
 import '../../pages/HomeStyles/style/navbar.css'
-import { NavLink, json } from "react-router-dom";
+import { NavLink, json, useNavigate } from "react-router-dom";
 import navlogo from '../../images/NavLogo.jpeg'
 import {IoMdArrowDropdown} from 'react-icons/io'
 
@@ -20,6 +20,8 @@ function NavBar() {
   const [isMobileNavOpen,setIsMobileNavOpen] = useState(false)
   const [isOpenProfile,setIsOpenProfile] = useState(false)
   const [isLogin,setIsLogin] = useState({status:false})
+
+  const navigate = useNavigate()
   const mobNavVariante = {
     isOpen :{
       opacity : 1,
@@ -41,15 +43,24 @@ function NavBar() {
   }
   
   useEffect(()=>{
+    console.log('working')
     if(localStorage.getItem('user') && localStorage.getItem('auth')){
       let userdata = JSON.parse(localStorage.getItem('user'))
-      setIsLogin({
-        ...isLogin,
-        status:true,
-        ...userdata
-      })
+      if(userdata?.shopeTitle){
+        setIsLogin({
+          ...isLogin,
+          status:false          
+        })
+      }
+      else{
+          setIsLogin({
+            ...isLogin,
+            status:true,
+            ...userdata
+          })
+      }
     }
-  },[])
+  },[isLogin.status])
 
   return (
     <nav className="com_nav">
@@ -91,6 +102,7 @@ function NavBar() {
             {isOpenProfile && <div className="nav_userLogin_option">
               <ul>
                 <li>Your Profile</li>
+                {isLogin?.shopeTitle && <li onClick={()=>{navigate('/dashboard')}}>DashBoard</li>}
                 <li onClick={handlelogout}>Logout</li>
               </ul>
             </div>}
@@ -135,6 +147,7 @@ function NavBar() {
             {isOpenProfile && <div className="nav_userLogin_option">
               <ul>
                 <li>Your Profile</li>
+                {isLogin?.shopeTitle && <li onClick={()=>{navigate('/dashboard')}}>DashBoard</li>}
                 <li onClick={handlelogout}>Logout</li>
               </ul>
             </div>}
