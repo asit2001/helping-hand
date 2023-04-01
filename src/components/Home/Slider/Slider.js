@@ -77,13 +77,7 @@ function Slider() {
   return (
     <div className="slider">
       <div className="slider-wrapper" style={{ overflow: "hidden" }}>
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-          key={img.imgurl}
-          className="slide-filter"
-        ></motion.div> */}
+
         <div className="slide1">
           <AnimatePresence initial={false}>
             <motion.img
