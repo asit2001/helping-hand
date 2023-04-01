@@ -272,7 +272,8 @@
 }
 
 #button > button {
-    background-color: #611f69;
+    background-color: var(--color-bglight-dashboard);
+    cursor: pointer;
     color: white;
     border: none;
     padding: 10px;

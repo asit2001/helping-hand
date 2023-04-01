@@ -59,7 +59,7 @@ export async function login(email:string,password:string,provider:boolean=false)
     const [token,data]  = await Promise.all([res.user.getIdToken(),(await get(Ref)).val()]);
     if (data) {
       localStorage.setItem('auth',token);
-      localStorage.setItem('user',data);
+      localStorage.setItem('user',JSON.stringify(data));
       return {...data,token}
     }else{
       throw({message:`You are not a ${url.replace("/","")}`});
