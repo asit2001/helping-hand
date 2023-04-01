@@ -38,8 +38,8 @@ export function Providercards(props) {
                 </div>
                 <div className="midimg23"><img className="part2img2" src={imgUrl === "" ? "https://1.cms.s81c.com/sites/default/files/2021-06-23/Financial_Services.png" : imgUrl} /></div>
                 <div style={{ display: "flex", justifyContent: "left", flexDirection: "column", alignItems: "left" }}>
-                    <p style={{ margin: "15px 0 0 0", fontSize: "20px", alignItems: "center", display: "flex" }}> <FcMoneyTransfer style={{ fontSize: "30px", marginRight: "10px" }} /><span style={{ fontWeight: "600" }}>Starts At : </span> <span style={{ textDecorationLine: "line-through", marginLeft: "10px" }}> &#8377;{price}</span></p>
-                    <p style={{ margin: "15px 0 0 0", fontSize: "20px", alignItems: "center", display: "flex" }}> <FcMoneyTransfer style={{ fontSize: "30px", marginRight: "10px" }} /><span style={{ fontWeight: "600" }}>Discounted : </span> <span style={{ marginLeft: "10px" }}>&#8377;{discountedPrice}</span></p>
+                    <p style={{ margin: "15px 0 0 0", fontSize: "18px", alignItems: "center", display: "flex" }}> <span>Starts At : </span> <span style={{ textDecorationLine: "line-through", marginLeft: "10px" , fontWeight: "600", fontSize: "22px"}}> &#8377;{price}</span></p>
+                    <p style={{ margin: "15px 0 0 0", fontSize: "18px", alignItems: "center", display: "flex" }}> <span>Discounted : </span> <span style={{ marginLeft: "10px" ,fontWeight: "600", fontSize: "20px", fontSize: "22px"}}>&#8377;{discountedPrice}</span></p>
                 </div>
             </div>
 
