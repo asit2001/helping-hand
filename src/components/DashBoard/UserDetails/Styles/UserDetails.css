@@ -1,11 +1,12 @@
-.mainDiv{
+.mainDiv {
   font-size: 62.5%;
   margin-top: 10px;
   font-weight: bold;
   overflow: hidden;
+  font-family: Trebuchet MS;
 }
 .mainDiv {
-  height:85%;
+  height: 85%;
   width: 100%;
   border-radius: 2rem;
   margin: auto;
@@ -20,27 +21,33 @@
 }
 
 .profile-body {
-  width:80%;
+  width: 80%;
   margin: auto;
   padding-top: 2rem;
+  background-color: #f5d5ff;
+  border-radius: 200px;
+  margin-top: 20px;
 }
 
 .profile {
-  margin-top: -45px;
+  /* margin-top: -45px; */
   margin-left: auto;
   margin-right: auto;
   border-radius: 25px;
-  background-color: #ddd;
+  /* background-color: #fff; */
+  background-color: #f5d5ff;
   margin-bottom: 2rem;
   padding-top: 3rem;
-  padding-bottom: 2rem;
+  /* padding-bottom: 4rem; */
   z-index: 0;
 }
 
 .socialmedia {
   text-align: center;
-} 
- 
+}
+.social-media-icons {
+  font-size: 20px;
+}
 .photo {
   margin: 25px;
 }
@@ -49,7 +56,7 @@
   width: 170px;
   height: 170px;
   border: #fff 3px solid;
-  border-radius: 50%;
+  border-radius: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -65,17 +72,44 @@
 .descricao {
   text-align: center;
   padding: 0;
-  margin: 1px;
-  font-weight:400;
+  font-weight: 400;
 }
-
+.fb {
+  color: #047bd5;
+  margin-right: 10px;
+}
+.twitter {
+  color: #047bd5;
+  margin-right: 10px;
+}
+.linkedIn {
+  color: #006192;
+  margin-right: 10px;
+}
 .username {
   font-size: 20pt;
   margin: 2px;
+  margin-top: -65px;
+  color: blueviolet;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.location-social {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  align-items: baseline;
 }
 
 .profession {
-  font-size: 14pt;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 3rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .locationname {
@@ -84,13 +118,15 @@
 }
 
 .descricao {
-  border-top: #969696 solid 1px;
-  font-size: 11pt;
-  margin: 5px;
+  /* border-top: #969696 solid 1px; */
+  margin-top: -10px;
+  font-size: 15pt;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 #rating-stars {
-  margin: 5px;
+  margin-top: 40px;
 }
 
 #rating-stars .stars {
@@ -139,10 +175,10 @@
   margin-top: 1.75rem;
   margin-left: 2.5rem;
 }
-.credit-card-el svg{
-  margin-top:5%;
+.credit-card-el svg {
+  margin-top: 5%;
 }
-.credit-card-el-amount{
+.credit-card-el-amount {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,8 +196,8 @@
   font-size: 1.5rem;
   color: blueviolet;
 }
-.bal-latest{
-  margin-top: 2.0rem;
+.bal-latest {
+  margin-top: 2rem;
   margin-left: 3rem;
 }
 .bal-latest hr {
@@ -216,40 +252,41 @@
   font-size: 1rem;
   color: blueviolet;
 }
-@media screen and (max-width:875px) {
-  .dashboard:has(.profile-body){
+@media screen and (max-width: 875px) {
+  .dashboard:has(.profile-body) {
     height: 100vh;
   }
 }
 @media (max-width: 700px) {
-  .dashboard{
+  .dashboard {
     height: 100% !important;
   }
   .mainDiv {
     flex-direction: column;
   }
-  .div1,.div2{
+  .div1,
+  .div2 {
     width: auto;
     margin: auto;
   }
-  .credit-card-el{
+  .credit-card-el {
     width: 100%;
   }
-  .photo,.stars {
-    margin:auto;
-
+  .photo,
+  .stars {
+    margin: auto;
   }
-  .profile{
+  .profile {
     padding-top: 10%;
     margin: auto;
     padding-left: 0;
     padding-bottom: 0;
     padding-right: 0%;
   }
-  .parent .div1{
+  .parent .div1 {
     margin-left: 0;
   }
-  .parent{
+  .parent {
     margin-left: 2rem;
   }
 }
