@@ -26,6 +26,7 @@ export function Providercards(props) {
                 <div id="rate" >
                     <AiFillStar className='rz' />
                     <AiFillStar className='rz' />
+                    
                     <AiFillStar className='rz' />
                     <AiFillStar className='rz' />
                     <p style={{ fontSize: "20px", color: "red" , margin: "10px 0px 20px 0px"}}>Overall Reviews: 2K</p>
