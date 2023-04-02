@@ -51,8 +51,7 @@ function WhatsApp() {
   }
 
   return (
-    <AnimatePresence>
-    {console.log(chatmsg)}
+    <AnimatePresence>    
       <motion.div
         variants={variants}
         animate={isOpen ? "wopen" : "wclose"}
