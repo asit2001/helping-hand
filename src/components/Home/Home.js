@@ -11,6 +11,7 @@ import Testimonial from "./Testimonial";
 import Footer from "../Footer/Footer";
 
 import getAllData from "../../firebase";
+import WhatsApp from "../WhatsApp.js/WhatsApp";
 
 function Home() {
   const [servicesdata, setServicesData] = useState([]);
@@ -75,7 +76,7 @@ function Home() {
         })}
 
       <Testimonial />
-
+      <WhatsApp />
       <Footer />
     </>
   );

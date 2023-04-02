@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch,faBars } from "@fortawesome/free-solid-svg-icons";
 import {motion} from 'framer-motion';
 import '../../pages/HomeStyles/style/navbar.css'
-import { NavLink, json, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import navlogo from '../../images/NavLogo.jpeg'
 import {IoMdArrowDropdown} from 'react-icons/io'
 
@@ -45,7 +45,7 @@ function NavBar() {
   }
   
   useEffect(()=>{
-    console.log('working')
+    
     if(localStorage.getItem('user') && localStorage.getItem('auth')){
       let userdata = JSON.parse(localStorage.getItem('user'))
       if(userdata?.shopeTitle){
