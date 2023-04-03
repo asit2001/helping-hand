@@ -62,5 +62,5 @@ nmp start
 
 ## License
 
-The Password Generator is licensed under the terms of the MIT Open Source
+The Helping Hand is licensed under the terms of the MIT Open Source
 license and is available for free.
