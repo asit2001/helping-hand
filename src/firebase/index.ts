@@ -1,6 +1,6 @@
 import { initializeApp} from "firebase/app";
 import { getDatabase, ref, onValue, set,get} from "firebase/database";
-import {createUserWithEmailAndPassword,getAuth, signInWithEmailAndPassword, signOut} from 'firebase/auth'
+import {createUserWithEmailAndPassword,getAuth, signInWithEmailAndPassword,sendPasswordResetEmail ,signOut} from 'firebase/auth'
 import { AllServices } from "../type";
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -16,6 +16,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 getDatabase(app);
 const auth = getAuth(app);
+// console.log(auth.currentUser)
 export default function getAllData(setData:React.Dispatch<React.SetStateAction<AllServices[] | undefined>>){
   const db = getDatabase();
   const starCountRef = ref(db, 'services');
@@ -65,6 +66,13 @@ export async function login(email:string,password:string,provider:boolean=false)
       throw({message:`You are not a ${url.replace("/","")}`});
     }
 
+}
+export async function forgetPassword(email:string){
+  return await sendPasswordResetEmail(auth,email).then(()=>{
+      return {msg:'Password reset email sent!'}
+  }).catch((error)=>{
+      return {error:error};
+  })
 }
 export function logOut(){
   signOut(auth).then(()=>{
