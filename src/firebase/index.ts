@@ -68,11 +68,12 @@ export async function login(email:string,password:string,provider:boolean=false)
 
 }
 export async function forgetPassword(email:string){
-  return await sendPasswordResetEmail(auth,email).then(()=>{
-      return {msg:'Password reset email sent!'}
-  }).catch((error)=>{
-      return {error:error};
-  })
+   try {
+    await sendPasswordResetEmail(auth,email);
+    return {msg:'Password reset email sent!'}
+   } catch (error) {
+    return {error:error};
+   }
 }
 export function logOut(){
   signOut(auth).then(()=>{
