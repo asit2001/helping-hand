@@ -33,7 +33,6 @@
   margin-right: auto;
   border-radius: 25px;
   margin-bottom: 2rem;
-  padding-top: 3rem;
   z-index: 0;
 }
 
@@ -84,7 +83,6 @@
 .username {
   font-size: 20pt;
   margin: 2px;
-  margin-top: -65px;
   color: blueviolet;
   font-weight: bold;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -283,5 +281,6 @@
   }
   .parent {
     margin-left: 2rem;
+    margin-bottom: 100px;
   }
 }

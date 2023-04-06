@@ -88,9 +88,10 @@
 @media screen and (max-width:875px) {
     .dashboard__container__left{
         border-radius: 0;
-        position: sticky;
+        position: fixed;
         bottom: 0;
         z-index: 1;
+        width: 100%;
     }
     .container__left__list{
         display: flex;

@@ -10,6 +10,7 @@ import {
 import DropDown from "./DropDown";
 import { FaArrowLeft } from "react-icons/fa";
 import { registerServerProvider, registerUser } from "../../firebase";
+import { GiTireIronCross } from "react-icons/gi"
 
 
 const categories = ["user" , "serviceprovider"];
@@ -117,6 +118,7 @@ export default function UserSignUp() {
   return (
     <section>
       <div className="register">
+        <div className="Signin_BacktoHome" onClick={()=>{navigate('/')}}><GiTireIronCross /></div>
         <div className="col-1">
           {(forms.form2 || forms.addressForm ) && <FaArrowLeft onClick={()=>{
             forms.form2?
