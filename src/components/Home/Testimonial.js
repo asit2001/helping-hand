@@ -1,6 +1,6 @@
 import {FaAngleRight,FaAngleLeft} from 'react-icons/fa'
 import React, { useRef } from "react";
-import quotesimg from "../../images/right-quote-sign.png";
+import quotesimg2 from "../../images/icons8-get-quote-50.png";
 import whiteteture from '../../images/white-paper-texture.jpg'
 import '../../pages/HomeStyles/style/testimonial.css'
 
@@ -82,7 +82,7 @@ function Testimonial() {
                   </div>
                   <div className="testimonial_container_wrap_card_details">
                   <img className='testmonialsvg' src={whiteteture} alt=''/>
-                    <img className="quotes" src={quotesimg} alt="" />
+                    <img className="quotes" src={quotesimg2} alt="" />
                     <div className="testimonial_container_wrap_card_details_title">
                       {card.name}
                     </div>
