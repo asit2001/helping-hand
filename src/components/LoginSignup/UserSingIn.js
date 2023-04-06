@@ -2,28 +2,25 @@ import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import MypasswordPana from "../Logo/MypasswordPana";
 import { login } from "../../firebase";
-import DropDown from "./DropDown";
 import { MdOutlineDisabledVisible } from "react-icons/md";
 import { forgetPassword } from "../../firebase/index";
 
-const optionList = ["user", "serviceprovider"];
 function UserSingIn() {
   const navigate = useNavigate();
   const [loginInfo, setLoginInfo] = useState({
     email: "",
     password: "",
   });
-  const [selectDropdown, setSelectDropDown] = useState("user");
-  const [error, setError] = useState({ status: false, msg: "",color:'red'});
+  const [error, setError] = useState({ status: false, msg: "", color: "red" });
   const [btnloader, setBtnLoader] = useState(false);
-  const [isForngotPassword,setIsForgotPassword] = useState(false);
+  const [isForngotPassword, setIsForgotPassword] = useState(false);
 
   function handleSetError(status, msg) {
     setError({
       ...error,
       status: status,
       msg: msg,
-      color:'red'
+      color: "red",
     });
   }
 
@@ -40,21 +37,12 @@ function UserSingIn() {
       return;
     }
 
-    if (selectDropdown === "user") {
-      login(loginInfo.email, loginInfo.password)
-        .then((data) => navigate("/", { state: data }))
-        .catch((e) => {
-          handleSetError(true, "Please Enter Correct Email & Password");
-          setBtnLoader(false);
-        });
-    } else {
-      login(loginInfo.email, loginInfo.password, true)
-        .then((data) => navigate("/dashboard", { state: data }))
-        .catch((e) => {
-          handleSetError(true, "Please Enter Correct Email & Password");
-          setBtnLoader(false);
-        });
-    }
+    login(loginInfo.email, loginInfo.password)
+      .then(() => navigate("/"))
+      .catch(() => {
+        handleSetError(true, "Please Enter Correct Email & Password");
+        setBtnLoader(false);
+      });
   }
 
   return (
@@ -64,13 +52,8 @@ function UserSingIn() {
           <h2>Sign In</h2>
           <span>login and enjoy the service</span>
           <form id="form" className="flex flex-col" onSubmit={logIn}>
-            <DropDown
-              name={selectDropdown}
-              changeName={setSelectDropDown}
-              droplist={optionList}
-            />
             <input
-              disabled={isForngotPassword?true:false}
+              disabled={isForngotPassword ? true : false}
               type="email"
               placeholder="Email Address"
               onChange={(e) => {
@@ -79,7 +62,7 @@ function UserSingIn() {
               }}
             />
             <input
-              disabled={isForngotPassword?true:false}
+              disabled={isForngotPassword ? true : false}
               type="password"
               placeholder="password"
               onChange={(e) => {
@@ -88,78 +71,80 @@ function UserSingIn() {
               }}
             />
             {error.status && (
-              <span                
+              <span
                 className="error"
-                style={{color:error.color, fontSize: ".8rem" }}
+                style={{ color: error.color, fontSize: ".8rem" }}
               >
                 *{error.msg}
               </span>
             )}
             <button
               type="button"
-              onClick={()=>{
-                setIsForgotPassword(!isForngotPassword)
+              onClick={() => {
+                setIsForgotPassword(!isForngotPassword);
               }}
               style={{
-                width:'fit-content',
-                alignSelf:'end',
+                width: "fit-content",
+                alignSelf: "end",
                 textDecoration: "underline",
                 fontSize: ".85rem",
                 cursor: "pointer",
-                backgroundColor:'transparent',
-                border:'none'
+                backgroundColor: "transparent",
+                border: "none",
               }}
             >
-              {!isForngotPassword?'Forgot Password?':'Cancel'}
+              {!isForngotPassword ? "Forgot Password?" : "Cancel"}
             </button>
-            {!isForngotPassword && <button disabled={btnloader ? true : false} className="btn">
-              {btnloader && <MdOutlineDisabledVisible color="red" />} Log In
-            </button>}
+            {!isForngotPassword && (
+              <button disabled={btnloader ? true : false} className="btn">
+                {btnloader && <MdOutlineDisabledVisible color="red" />} Log In
+              </button>
+            )}
           </form>
-          {isForngotPassword && <div className="forgotPassword_container">
-            <input disabled={btnloader?true:false} type="email" placeholder="Enter the Email"/>
-            <button
-              disabled={btnloader?true:false}
-              type="button"
-              onClick={(e) => {                
-                setBtnLoader(true);
-                let fogotval = e.target.previousElementSibling.value
-                if(fogotval !== ''){
-                  forgetPassword(fogotval)
-                    .then((returndata)=>{
-                      const {msg,error} = returndata;
-                      if(msg){
+          {isForngotPassword && (
+            <div className="forgotPassword_container">
+              <input
+                disabled={btnloader ? true : false}
+                type="email"
+                placeholder="Enter the Email"
+              />
+              <button
+                disabled={btnloader ? true : false}
+                type="button"
+                onClick={(e) => {
+                  setBtnLoader(true);
+                  let fogotval = e.target.previousElementSibling.value;
+                  if (fogotval !== "") {
+                    forgetPassword(fogotval).then((returndata) => {
+                      const { msg, error } = returndata;
+                      if (msg) {
                         setError({
                           ...error,
-                          status:true,
-                          msg:msg,
-                          color:'green'
-                        })
-                        setIsForgotPassword(false)
-                      }
-                      else if(error){
-                        handleSetError(true,'Invalid Email')
+                          status: true,
+                          msg: msg,
+                          color: "green",
+                        });
+                        setIsForgotPassword(false);
+                      } else if (error) {
+                        handleSetError(true, "Invalid Email");
                       }
                       setBtnLoader(false);
-                    })
-                }
-                else{
-                  handleSetError(true,'Email Required')
-                  setBtnLoader(false);
-                }
-
-              }}
-              
-            >
-              Send to Email
-            </button>
-          </div>}
+                    });
+                  } else {
+                    handleSetError(true, "Email Required");
+                    setBtnLoader(false);
+                  }
+                }}
+              >
+                Send to Email
+              </button>
+            </div>
+          )}
           <NavLink to={"/signup"}>New to Helping hand? Signup</NavLink>
         </div>
         <div className="col-3">
           <MypasswordPana />
         </div>
-     
       </div>
     </section>
   );

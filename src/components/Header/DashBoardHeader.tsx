@@ -5,11 +5,16 @@ import { CiBellOn } from "react-icons/ci";
 
 import "./styles/DashBoardHeader.css";
 import { Link } from "react-router-dom";
-import { logOut } from "../../firebase";
+import { auth, logOut } from "../../firebase";
 import { useState } from "react";
 
 function DashBoardHeader() {
-  const [user] = useState(JSON.parse(localStorage.getItem("user")!));
+  const [name,setName] = useState("");
+  auth.onAuthStateChanged((user)=>{
+    if (user && user.displayName) {
+      setName(user.displayName)
+    }
+  })
   return (
     <div className="container__right__header">
       <div className="header__searchBox">
@@ -28,11 +33,11 @@ function DashBoardHeader() {
         <CiBellOn className="header__icon" />
         <img
           className="header__profile__img"
-          src={`https://i.pravatar.cc/150?u=${user?.name}`}
+          src={`https://i.pravatar.cc/150?u=${name}`}
           alt="user profile"
         />
         <div className="dropdown">
-        <p className="header_profile_name">{user?.name} <RiArrowDownSLine className="dropdown"/></p>
+        <p className="header_profile_name">{name} <RiArrowDownSLine className="dropdown"/></p>
 
           <div className="dropdown-content">
             <Link to="/" onClick={logOut}>
