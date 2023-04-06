@@ -34,7 +34,24 @@
   /* box-shadow: 1px 3px 10px */
    box-shadow: 0 3px 20px #ba68c8;
   background-color: white;
+  position: relative;
 
+}
+.Signin_BacktoHome{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: transform 1s;
+  transform-origin: center;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.Signin_BacktoHome:hover{
+  transform: rotate(360deg);
 }
 .forgotPassword_container{
   margin-bottom: 1rem;
@@ -119,6 +136,7 @@
   /* padding: 3em 0; */
   position: relative;
 }
+
 .iconBack{
   position: absolute;
   left: 10px;
