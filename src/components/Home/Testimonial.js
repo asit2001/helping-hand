@@ -31,13 +31,16 @@ const TestimonialCards = [
 function Testimonial() {
   const ref = useRef();
   function handleprev() {
-    let clientwidth = ref.current.clientWidth;
-    ref.current.scrollLeft = ref.current.scrollLeft - clientwidth;
+    // let clientwidth = ref.current.clientWidth;
+    let itemDivWidth = ref.current.children[0].clientWidth
+    ref.current.scrollLeft = ref.current.scrollLeft - itemDivWidth;
     // console.log(ref.current.scrollWidth)
   }
   function handlenext() {
-    let clientwidth = ref.current.clientWidth;
-    ref.current.scrollLeft = ref.current.scrollLeft + clientwidth;
+    // let clientwidth = ref.current.clientWidth;
+    // console.log(ref.current.children[0].clientWidth)
+    let itemDivWidth = ref.current.children[0].clientWidth
+    ref.current.scrollLeft = ref.current.scrollLeft + itemDivWidth;
   }
   return (
     <div className="testimonial_container">
