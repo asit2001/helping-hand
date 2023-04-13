@@ -9,15 +9,17 @@ import {
 } from "react-icons/fa";
 import { DollarBag, RightArrow } from "../../Logo";
 import { Link} from "react-router-dom";
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import { auth } from "../../../firebase";
 export default function UserDetails() {
   const [name,setName] = useState("");
-  auth.onAuthStateChanged((user)=>{
-    if (user && user.displayName) {
-      setName(user.displayName)
-    }
-  })
+  useEffect(()=>{
+    auth.onAuthStateChanged((user)=>{
+      if (user && user.displayName) {
+        setName(user.displayName)
+      }
+    })
+  },[])
   return (
     <div className="mainDiv">
       <div className="div1">

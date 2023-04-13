@@ -6,15 +6,17 @@ import { CiBellOn } from "react-icons/ci";
 import "./styles/DashBoardHeader.css";
 import { Link } from "react-router-dom";
 import { auth, logOut } from "../../firebase";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function DashBoardHeader() {
   const [name,setName] = useState("");
-  auth.onAuthStateChanged((user)=>{
-    if (user && user.displayName) {
-      setName(user.displayName)
-    }
-  })
+  useEffect(()=>{
+    auth.onAuthStateChanged((user)=>{
+      if (user && user.displayName) {
+        setName(user.displayName)
+      }
+    })
+  },[])
   return (
     <div className="container__right__header">
       <div className="header__searchBox">
