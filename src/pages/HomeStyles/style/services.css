@@ -71,7 +71,7 @@
     overflow: hidden;
     /* padding: 0 1rem; */
     gap: 20px;
-    scroll-snap-align: center;
+    scroll-snap-type: x mandatory;
   }
   .services__list .services__list_wrap .services__card{
     width: 300px;
@@ -84,6 +84,7 @@
     justify-content: space-between;
     align-items: center;
     min-height: 400px;
+    scroll-snap-align: center;
   }
   .services__card:hover .services__card-img-holder img{
     transform: scale(1.2);

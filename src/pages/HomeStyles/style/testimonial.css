@@ -89,6 +89,7 @@
     /* background-color: aqua; */
     padding: 2rem;
     gap: 50px;
+    scroll-snap-type: x mandatory;
   }
   
   
@@ -97,6 +98,7 @@
     width: 400px;
     flex-shrink: 0;
     /* margin: 1rem; */
+    scroll-snap-align: center;
   }
   .cardmove{
     right: -80px;

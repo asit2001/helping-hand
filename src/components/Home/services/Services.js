@@ -9,13 +9,16 @@ function Services({ heading, servicelist, idx }) {
   function handleleftmove(e) {
     let div = document.querySelector(`#${heading}${idx}`);
     // let clienwidth = div.clientWidth;
-    // console.log(clienwidth)
-    div.scrollLeft = div.scrollLeft - 320;
+    let itemDivWidth = div.children[0].clientWidth
+    div.scrollLeft = div.scrollLeft - itemDivWidth;
+    // div.scrollLeft = div.scrollLeft - clienwidth;
   }
   function handlerightmove(e) {
     let div = document.querySelector(`#${heading}${idx}`);
     // let clienwidth = div.clientWidth;
-    div.scrollLeft = div.scrollLeft + 320;
+    let itemDivWidth = div.children[0].clientWidth
+    div.scrollLeft = div.scrollLeft + itemDivWidth;
+    // div.scrollLeft = div.scrollLeft + clienwidth;
   }
   const navigate = useNavigate();
 
